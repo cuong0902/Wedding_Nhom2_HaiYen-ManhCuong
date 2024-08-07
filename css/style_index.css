@@ -34,6 +34,15 @@ ul.menu{
     padding: 0;
     margin: 0;
 }
+
+ul.menu>li{
+    border-right: 1px solid white;
+}
+
+ul.menu>li:last-child{
+    border: none;
+}
+
 ul.menu>li>a{
     text-decoration: none;
     display: block;
@@ -42,6 +51,27 @@ ul.menu>li>a{
 ul.menu>li>a:hover{
     background-color: darkblue;
     color: white;
+}
+
+.submenu{
+    display: none !important;
+}
+
+.submenu::after{
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color:  transparent transparent lightblue transparent ;
+    position: absolute;
+    left: 20%;
+    bottom: 100%;
+}
+
+.sub:hover .submenu{
+    position: absolute;
+    background-color: lightblue;
+    z-index: 2;
+    display: flex !important;
 }
 
 /*aside*/
@@ -91,4 +121,18 @@ section.content{
 footer{
     background-color: gray;
     font-size: 20px;
+}
+
+.input{
+    margin-bottom: var(--x);
+}
+
+textarea{
+    width: 250px;
+    height: 100px;
+}
+
+#select{
+    width: 160px;
+    height: 25px;
 }
