@@ -5,28 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Website Nhà Hàng tiệc cưới"/>
     <meta http-equiv="refresh" content="1800" />
-    <title>Nhà Hàng Tiệc Cưới</title>
+    <title>Nhà Hàng Tiệc Cưới Capella Park View</title>
     <link href="image/demo/logo.webp" rel="shortcut icon"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/style_index.css">
 </head>
 <body>
-    <header class="flex header">
+    <header id="header" class="flex header">
         <img src="image/demo/logo.webp" alt="Logo">
-        <h1 class="subject">Nhà hàng Capella Park View</h1>
+        <h1 class="subject">Nhà hàng tiệc cưới Capella Park View</h1>
         <ul class="flex">
-                <li><a href="#"><i class="fa-solid fa-bell"></i></a></li>
-                <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+                <li class="notices"><a href="#"><i class="fa-solid fa-bell"></i></a>
+                    <ul class="notice">
+                        <li><span style="color: gold">Trần Hải Yến</span> vừa phản hồi bình luận của bạn</li>
+                        <li>Đơn đặt bàn<span style="color: gold"> #2024</span> của bạn đã được xử lí</li>
+                    </ul>
+                </li>
+                <li class="user"><a href="#"><i class="fa-solid fa-user"></i></a>
+                    <ul class="userDetail">
+                        <li><span style="color: aqua">Tên người dùng:</span> Nguyễn Mạnh Cường</li>
+                        <li><span style="color: aqua">SDT:</span> 0338638774</li>
+                        <li><span style="color: aqua">Email:</span> 2051052015cuong@ou.edu.vn</li>
+                    </ul>
+                </li>
         </ul>
     </header>
     <nav class="flex">
         <div></div>
+        <div></div>
        <ul class="flex menu">
-            <li><a href="#"><i class="fa-solid fa-house"></i>Trang Chủ</a></li>
+            <li><a href="index.html"><i class="fa-solid fa-house"></i>Trang Chủ</a></li>
             <li class="sub"><a href="#">Dịch Vụ Tiệc</a>
                 <ul class="menu flex submenu">
                     <li><a href="#">Tiệc Công Ty</a></li>
-                    <li><a href="#">Tiệc Cưới</a></li>
+                    <li><a href="Service/TiecCuoi.html">Tiệc Cưới</a></li>
                     <li><a href="#">Tiệc Ngoài</a></li>
                     <li><a href="#">Tiệc Cá Nhân</a></li>
                 </ul>
@@ -34,7 +46,7 @@
             <li><a href="#">Tin Tức</a></li>
             <li><a href="#">Liên Hệ</a></li>
        </ul>
-        <div>
+        <div class="search">
             <input type="search" placeholder="Nhập từ khóa"/>
             <button><i class="fa-solid fa-magnifying-glass"></i></button>    
         </div>
@@ -45,93 +57,212 @@
             <div>LIÊN HỆ QUẢNG CÁO</div>
         </div>
     </aside>
-    <section class="content">
 
-        <div class="flex combo 1">
-            <a href="#">
-                <img src="image/demo/intro_ud1_6.jpg" alt="ảnh đại diện">        
-            </a>
-            <div class="description">
-                <h2>Tiệc cưới trọn đắm say TRỌN GÓI TỪ 49,000,000 VND/100 KHÁCH</h2>
-                <p>
-                    Mừng ngày trọng đại của đôi bạn khi trao gửi tổ chức tiệc cưới tại Capella Park View, chúng tôi thân gửi món quà ngọt ngào tới cô dâu chú rể với Gói Tiệc Cưới Từ 𝟒𝟗,𝟎𝟎𝟎,𝟎𝟎𝟎 VND, áp dụng từ 100 Khách, gồm:
-                </p>      
-                <ul>
-                    <li>Thực đơn yến tiệc 06 Món cao cấp</li>
-                    <li>Bia, nước ngọt, nước suối trong tiệc</li>
-                    <li>Tặng dịch vụ Lễ Tiệc</li>
-                    <li>Voucher quà tăng dịch vụ thiệp cưới, váy cưới, studio,...</li>
-                </ul>
-            </div> 
-        </div>
+    <main>
+        <section class="content">
 
-        <div class="flex combo 2">
-            <div class="description">
-                <h2>Tri Ân Đối Tác Và Cộng Sự
-                    TỪ 469,900++VND/KHÁCH</h2>
-                <p>
-                    Ưu đãi dành riêng cho các sự kiện yến tiệc, Capella ParkView tự tin góp phần tạo nên sự kiện chuyên nghiệp cho Quý doanh nghiệp:
-                </p>      
-                <ul>
-                    <li>Thực đơn yến tiệc cao cấp, Tặng thức uống trong tiệc</li>
-                    <li>Sức chứa sảnh yến tiệc lến đến 1,200 khách</li>
-                    <li>Trần cao 6m đáp ứng cho các sự kiện quy mô lớn</li>
-                    <li>Phong cách trang trí đa dạng và linh động mang tính thẩm mỹ cao</li>
-                </ul>
-            </div> 
-            <a href="#">
-                <img src="image/demo/gala.webp" alt="Gala">        
-            </a>
-        </div>
+            <div class="flex combo 1">
+                <a href="#">
+                    <img src="image/demo/intro_ud1_6.jpg" alt="ảnh đại diện">        
+                </a>
+                <div class="description">
+                    <h2>Tiệc cưới trọn đắm say TRỌN GÓI TỪ 49,000,000 VND/100 KHÁCH</h2>
+                    <p>
+                        Mừng ngày trọng đại của đôi bạn khi trao gửi tổ chức tiệc cưới tại Capella Park View, chúng tôi thân gửi món quà ngọt ngào tới cô dâu chú rể với Gói Tiệc Cưới Từ 𝟒𝟗,𝟎𝟎𝟎,𝟎𝟎𝟎 VND, áp dụng từ 100 Khách, gồm:
+                    </p>      
+                    <ul>
+                        <li>Thực đơn yến tiệc 06 Món cao cấp</li>
+                        <li>Bia, nước ngọt, nước suối trong tiệc</li>
+                        <li>Tặng dịch vụ Lễ Tiệc</li>
+                        <li>Voucher quà tăng dịch vụ thiệp cưới, váy cưới, studio,...</li>
+                    </ul>
+                </div> 
+            </div>
 
-        <div class="flex combo 3">
-            <a href="#">
-                <img src="image/demo/mungBeYeu.webp" alt="Mừng Bé Yêu">        
-            </a>
-            <div class="description">
-                <h2>Mừng Bé Yêu Đón Tuổi Mới
-                    TẶNG 100% TRANG TRÍ TIỆC SINH NHẬT THEO CHỦ ĐỀ</h2>
-                <p>
-                    Hãy để Capella Park View giúp ba mẹ chu toàn cho buổi tiệc SINH NHẬT TRỌN GÓI ấn tượng chỉ từ 𝟒,𝟏𝟎𝟎,𝟎𝟎𝟎 𝐕𝐍𝐃/𝐛𝐚̀𝐧:
-                </p>      
-                <ul>
-                    <li>Trang trí tiệc theo chủ đề mà bé yêu thích</li>
-                    <li>Menu tiệc 06 món hấp dẫn, Tặng bia, nước ngọt, nước suối trong tiệc</li>
-                    <li>Chương trình đa dạng, tiết mục độc đáo</li>
-                    <li>Chú hề bong bóng hoạt náo</li>
-                </ul>
-            </div> 
-        </div>
+            <div class="flex combo 2">
+                <div class="description">
+                    <h2>Tri Ân Đối Tác Và Cộng Sự
+                        TỪ 469,900++VND/KHÁCH</h2>
+                    <p>
+                        Ưu đãi dành riêng cho các sự kiện yến tiệc, Capella ParkView tự tin góp phần tạo nên sự kiện chuyên nghiệp cho Quý doanh nghiệp:
+                    </p>      
+                    <ul>
+                        <li>Thực đơn yến tiệc cao cấp, Tặng thức uống trong tiệc</li>
+                        <li>Sức chứa sảnh yến tiệc lến đến 1,200 khách</li>
+                        <li>Trần cao 6m đáp ứng cho các sự kiện quy mô lớn</li>
+                        <li>Phong cách trang trí đa dạng và linh động mang tính thẩm mỹ cao</li>
+                    </ul>
+                </div> 
+                <a href="#">
+                    <img src="image/demo/gala.webp" alt="Gala">        
+                </a>
+            </div>
 
-        <div class="flex combo 4">
-            <div class="description">
-                <h2>ƯU ĐÃI HỘI NGHỊ TRỌN GÓI
-                    250K++/Khách</h2>
-                <p>
-                    Khơi Nguồn Nội Lực - Kiến Tạo Thành Công
-                </p>      
-                <ul>
-                    <li>Không gian sảnh linh hoạt, sức chứa từ 40 khách đến 1.500 khách</li>
-                    <li>Tiệc tea-break đầu giờ hoặc giữa giờ, Hoa tươi bàn lễ tân</li>
-                    <li>Hệ thống âm thanh, ánh sáng hiện đại</li>
-                    <li>Tặng màn hình LED trình chiếu và màn sao full sân khấu</li>
-                </ul>
-            </div> 
-            <a href="#">
-                <img src="image/demo/HoiNghi.webp" alt="Hội Nghị">        
-            </a>
-        </div>
+            <div class="flex combo 3">
+                <a href="#">
+                    <img src="image/demo/mungBeYeu.webp" alt="Mừng Bé Yêu">        
+                </a>
+                <div class="description">
+                    <h2>Mừng Bé Yêu Đón Tuổi Mới
+                        TẶNG 100% TRANG TRÍ TIỆC SINH NHẬT THEO CHỦ ĐỀ</h2>
+                    <p>
+                        Hãy để Capella Park View giúp ba mẹ chu toàn cho buổi tiệc SINH NHẬT TRỌN GÓI ấn tượng chỉ từ 𝟒,𝟏𝟎𝟎,𝟎𝟎𝟎 𝐕𝐍𝐃/𝐛𝐚̀𝐧:
+                    </p>      
+                    <ul>
+                        <li>Trang trí tiệc theo chủ đề mà bé yêu thích</li>
+                        <li>Menu tiệc 06 món hấp dẫn, Tặng bia, nước ngọt, nước suối trong tiệc</li>
+                        <li>Chương trình đa dạng, tiết mục độc đáo</li>
+                        <li>Chú hề bong bóng hoạt náo</li>
+                    </ul>
+                </div> 
+            </div>
 
-    </section>
+            <div class="flex combo 4">
+                <div class="description">
+                    <h2>ƯU ĐÃI HỘI NGHỊ TRỌN GÓI
+                        250K++/Khách</h2>
+                    <p>
+                        Khơi Nguồn Nội Lực - Kiến Tạo Thành Công
+                    </p>      
+                    <ul>
+                        <li>Không gian sảnh linh hoạt, sức chứa từ 40 khách đến 1.500 khách</li>
+                        <li>Tiệc tea-break đầu giờ hoặc giữa giờ, Hoa tươi bàn lễ tân</li>
+                        <li>Hệ thống âm thanh, ánh sáng hiện đại</li>
+                        <li>Tặng màn hình LED trình chiếu và màn sao full sân khấu</li>
+                    </ul>
+                </div> 
+                <a href="#">
+                    <img src="image/demo/HoiNghi.webp" alt="Hội Nghị">        
+                </a>
+            </div>
+        </section>
+
+        <section class="youtube">
+            <div>
+                <iframe width="100%" height="800rem" src="https://www.youtube.com/embed/TjJ2NdmCPCc?si=HZNY1ymx7XvZ421T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section class="services flex">
+            <div class="service">
+                <a href="Service/TiecCuoi.html">
+                    <img src="image/demo/banner_TiecCuoi.webp" alt="Tiệc Cưới">
+                </a>
+                <p>Tiệc Cưới</p>
+            </div>
+
+            <div class="serviceCenter">
+                <div class="svCTTop flex">
+                    <div class="service svCTLeft">
+                        <a>
+                            <img src="image/demo/banner_SinhNhat.jpg" alt="Sinh Nhật">
+                        </a>
+                        <p>Sinh Nhật</p>
+                    </div>
+                    <div class="service svCTRight">
+                        <a>
+                            <img src="image/demo/banner_TiecNgoai_gal3.webp" alt="Tiệc Ngoài">
+                        </a>
+                        <p>Tiệc Ngoài</p>
+                    </div>
+                </div>
+                <div class="service svCTBottom">
+                    <a>
+                        <img src="image/demo/banner_TiecChieuDai_gal4.webp" alt="Tiệc Cưới">
+                    </a>
+                    <p >Tiệc Chiêu Đãi</p>
+                </div>
+            </div>
+
+            <div class="service">
+                <a>
+                    <img src="image/demo/banner_HoiNghi_gal5.webp" alt="Tiệc Cưới">
+                </a>
+                <p>Hội Nghị</p>
+            </div>
+
+        </section>
+
+        <section class="comments">
+            <div class="title">
+                <h3>Nhận Xét Khách Hàng</h3>
+                <hr>
+            </div>
+
+            <div class="customers flex">
+
+                <div class="customer">
+                    <div>
+                        <img src="image/demo/BinhLuan_KhachHang/TrungHung_AiTran_350_2_medium.jpg" alt="TrungHung_AiTran">
+                        <p class="hus_wife">TRUNG HƯNG - ÁI TRÂN</p>
+                    </div>
+                </div>
+
+                <div class="customer">
+                    <div>
+                        <img src="image/demo/BinhLuan_KhachHang/ThienVinh_MinhTrang_350_1_medium.jpg" alt="TrungHung_AiTran">
+                        <p class="hus_wife">Thiện Vinh - Minh Trang</p>
+                    </div>
+                </div>
+
+                <div class="customer">
+                    <div>
+                        <img src="image/demo/BinhLuan_KhachHang/thanh_son_-_thanh_thuy_300_300__medium.jpg" alt="TrungHung_AiTran">
+                        <p class="hus_wife">Thanh Sơn - Thanh Thủy</p>
+                    </div>
+                </div>
+
+                <div class="customer">
+                    <div>
+                        <img src="image/demo/BinhLuan_KhachHang/QuangLong_HongPhuoc_350x350_medium.jpg" alt="TrungHung_AiTran">
+                        <p class="hus_wife">Quang Long - Hồng Phước</p>
+                    </div>
+                </div>
+
+                <div class="customer">
+                    <div>
+                        <img src="image/demo/BinhLuan_KhachHang/khac_thong_-_bao_chau_medium.jpg" alt="TrungHung_AiTran">
+                        <p class="hus_wife">Khắc Thông - Bảo Châu</p>
+                    </div>
+                </div>
+
+                <div class="customer">
+                    <div>
+                        <img src="image/demo/BinhLuan_KhachHang/ho_ng_th_ng_-_ng_c_ph_ng_medium.jpg" alt="TrungHung_AiTran">
+                        <p class="hus_wife">Hoàng Thông - Ngọc Phụng</p>
+                    </div>
+                </div>
+
+               
+            
+            </div>
+        </section>
+
+        <section class="fix">
+            <div class="phone">
+                <i class="fa-solid fa-phone"></i> 
+                <h3>0338638774</h3>     
+            </div>
+
+            <div class="back">
+                <button>
+                    <a href="#header">
+                        <i class="fa-solid fa-up-long" style="font-size: 1.5rem"></i>
+                    </a>
+                </button>
+            </div>
+        </section>
+        
+    </main>
 
     <footer class="flex">
-        <ul>
-            <li>Nhà Hàng Tiệc Cưới...</li>
+        <ul >
+            <li>Nhà Hàng Tiệc Cưới Cepella ParkView</li>
             <li>Địa Chỉ: KDC Nhơn Đức, Nhà Bè, TP. Hồ Chí Minh</li>
             <li>Điện Thoại: 0338638774</li>
             <li>Email: Capella@gmail.com</li>
         </ul>
-        <div>
+        <div >
             <p>TƯ VẤN ĐẶT TIỆC</p>
             <div class="input">
                 <input  type="text" placeholder="Họ và Tên">
@@ -154,8 +285,8 @@
             <button>Gửi Liên Hệ</button>
         </div>
         <div >
-            <h3>Địa chỉ Nhà hàng</h3>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15677.82484184881!2d106.6902291!3d10.7763284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3ae35e3725%3A0x20c5174a47f97be3!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBN4bufIFRQLkhDTSAtIEPGoSBz4bufIDE!5e0!3m2!1svi!2s!4v1722791358922!5m2!1svi!2s" width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <h3 style="height: 20%;">Địa chỉ Nhà hàng</h3>
+            <iframe width="90%" height="80%" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15677.82484184881!2d106.6902291!3d10.7763284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3ae35e3725%3A0x20c5174a47f97be3!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBN4bufIFRQLkhDTSAtIEPGoSBz4bufIDE!5e0!3m2!1svi!2s!4v1722791358922!5m2!1svi!2s"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </footer>
 </body>

@@ -1,0 +1,94 @@
+
+main{
+    width: 70%;
+    margin: 0 auto;
+}
+
+/*section 1*/
+section{
+    color: rgb(100, 93, 93);
+    text-shadow: 2px 3px 2px whitesmoke;
+    margin: 2%;
+}
+
+.contents{
+    width: 40%;
+}
+
+.contents>h2{
+    color: rgb(224, 247, 97);
+}
+
+.contents>h1{
+    border: 1px solid rgb(114, 79, 110);
+    padding: 1.5rem;
+}
+
+.content{
+    width: 35rem;
+    height: 30rem;
+    overflow: auto;
+}
+
+.images{
+    width: 40%;
+}
+.button>button{
+    padding: 0;
+    margin: 0;
+    justify-content: initial;
+    width: 10%;
+    background-color: white;
+    border: none;
+}
+button>img{
+    width: 100%;
+}
+
+/*section 2*/
+.category{
+    text-align: center;
+}
+.category>button{
+    padding: 1rem;
+    margin:1rem;
+    color: darkblue;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 10px;
+}
+.category>button:first-child{
+    color: white;
+    background-color: darkblue;  
+}
+.category>button:hover{
+    color: white;
+    background-color: darkblue;
+}
+
+/*Thu Vien Anh*/
+.thumbs{
+    flex-wrap: wrap;
+}
+.thumb{
+    width: 20%;
+    border: 1px solid black;
+    border-radius: 5%;
+    margin-top: 2%;
+}
+.thumb>img{
+    width: 100%;
+    border-radius: 5%;      
+}
+
+.thumb>p{
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: darkblue;
+    text-shadow: 2px 3px 2px whitesmoke;
+}
+
+.none{
+    display: none !important;
+}
