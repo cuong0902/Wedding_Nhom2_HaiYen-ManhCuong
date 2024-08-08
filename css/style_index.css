@@ -1,143 +1,10 @@
 /*Trang Index*/
-*{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.flex{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-:root{
-    --x: 10px;
-}
 
-/*header*/
-.header{
-    background-color: black;
-    color: white;
+/*Tiêu Đề search title*/
+.title>h3{
+    color: springgreen;
+    font-size: 2rem;
 }
-
-h1.subject{
-    text-transform: uppercase;
-    text-shadow: 3px 2px 2px whitesmoke;
-}
-.header>ul>li{
-    list-style-type: none;
-    padding: var(--x);
-    padding: 1rem;
-    font-size: 1.5rem;
-    margin-right: 1rem;
-}
-.header>ul>li:hover{
-    background-color: darkgray;
-}
-
-.notice{
-    list-style-type: square;
-    display: none;  
-    margin-top: 1%; 
-}
-.notice::after{
-    content: "";
-    border-width: 10px;
-    border-style: solid;
-    border-color:  transparent transparent black transparent ;
-    position: absolute;
-    right: 18%;
-    bottom: 100%;
-}
-
-.notices:hover .notice{
-    display: block;
-    background-color: black;
-    position: absolute;
-    right: 1%;
-}
-
-.userDetail{
-    list-style-type: circle;
-    display: none;  
-    margin-top: 1%;
-}
-
-.userDetail::after{
-    content: "";
-    border-width: 10px;
-    border-style: solid;
-    border-color:  transparent transparent black transparent ;
-    position: absolute;
-    right: 5%;
-    bottom: 100%;
-}
-
-.user:hover .userDetail{
-    display: block;
-    background-color: black;
-    position: absolute;
-    right: 1%;
-}
-/*nav*/
-nav{
-    background-color: lightblue;
-}
-ul.menu{
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-ul.menu>li{
-    border-right: 1px solid white;
-    
-}
-
-ul.menu>li:last-child{
-    border: none;
-}
-
-ul.menu>li>a{
-    text-decoration: none;
-    display: block;
-    padding: 1.5rem;
-    
-}
-ul.menu>li>a:hover{
-    background-color: darkblue;
-    color: white;
-}
-
-.submenu{
-    display: none !important;
-}
-
-.submenu::after{
-    content: "";
-    border-width: 10px;
-    border-style: solid;
-    border-color:  transparent transparent lightblue transparent ;
-    position: absolute;
-    left: 20%;
-    bottom: 100%;
-}
-
-.sub:hover .submenu{
-    position: absolute;
-    background-color: lightblue;
-    z-index: 2;
-    display: flex !important;
-}
-
-.search{
-    margin-right: 1rem;
-    margin-left: 0;
-}
-.search>input{
-    font-size: large;
-}
-.search>button{
-    font-size: large;
-}
-
 /*aside*/
 .ads>div{
     width: 14%;
@@ -187,6 +54,36 @@ section{
     padding: 1.5rem;
 }
 
+
+
+.promos{
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+.thumb_pro{
+    width: 20%;
+    margin-top: 1%;
+}
+.thumb_pro img{
+    width: 100%;
+}
+
+.pro_detail{
+    width: 70%;
+}
+.pro_detail img{
+    margin-left: 15%;
+}
+.pro_detail>h2{
+    padding: 0;
+    margin: 0;
+}
+.pro_detail img{
+    width: 70%;
+    
+}
 /*section service*/
 .service{
     position: relative;
@@ -243,10 +140,56 @@ section{
     left: 30%;
 }
 
-/*section comments*/
-.title>h3{
-    color: springgreen;
+/*section blogs*/
+.blogs{
+    flex-wrap: wrap;
 }
+.news{
+    width: 30%;
+    padding: 0;
+    margin: 1% 0;
+    border: 1px solid gray;
+    border-radius: 2%;
+    position: relative;
+}
+.new{
+    overflow: hidden;
+}
+.new img{
+    width: 100%;
+    border-radius: 2%;
+}
+.new img:hover{
+    transform: scale(1.3,1.3);
+}
+
+.news p{
+    text-transform: uppercase;
+    color: rgb(20, 165, 217);
+    text-align: center;
+}
+
+.day{
+    background-color: darkblue;
+    width: 14%;
+    color: aliceblue;
+    position: absolute;
+    top: 2%;
+    left: 4%;
+    text-align: center;
+}
+.day>h2{
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+.day>h4{
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+/*section comments*/
 
 .customers{
     flex-wrap: wrap;
@@ -307,23 +250,3 @@ section{
     transition: 0.5s;
 }
 
-/*footer*/
-footer{
-    background: url(../image/demo/bgFooter.jpeg);
-    font-size: 20px;
-    color: aliceblue;
-}
-
-.input{
-    margin-bottom: var(--x);
-}
-
-textarea{
-    width: 250px;
-    height: 100px;
-}
-
-#select{
-    width: 160px;
-    height: 25px;
-}
