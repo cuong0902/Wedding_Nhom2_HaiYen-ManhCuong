@@ -1,5 +1,6 @@
 window.onload = function(){
 
+    /* Ưu Đãi */
     /* Doi Hinh Trong Chi Tiet*/
     let main_thumb = document.getElementById("main_thumb");
     let thumb = document.querySelectorAll(".thumb_thumb img");
@@ -46,7 +47,7 @@ window.onload = function(){
             }
         }
     }
-    /*Dong Giao Dien Chi Tiet */
+    /*Đóng Giao Dien Chi Tiet */
 
     let btClose = document.getElementById("promos_close");
     btClose.onclick = function(){
@@ -55,8 +56,55 @@ window.onload = function(){
     }
 
 
-    /*Search*/
-    
+    /*Phone */
+    let phone = document.getElementById("fa_phone");
+    phone.onclick=function(){
+        let phoneNumber = document.getElementById("phoneNumber");
+        if(phoneNumber.className==="")
+            phoneNumber.className = "pro_none";
+        else
+        phoneNumber.className = "";
+    }
+
+
+    /* Comment */
+    let comment = document.querySelectorAll(".customer");
+    let btn_left_comment = document.querySelector(".next_comment>div:first-child");
+    let btn_right_comment = document.querySelector(".next_comment>div:last-child");
+    let count_comment = 0;
+
+    for (let i = 4; i < comment.length; i++) {
+        comment[i].className="pro_none";
+    }
+
+    btn_right_comment.onclick = function(){
+        let start = count_comment + 1;
+        let end = count_comment + 4;
+        if(count_comment<comment.length && end < comment.length)
+        {          
+            comment[count_comment].className="pro_none";      
+            for(let i = start;i<=end;i++){
+                comment[i].className="customer";
+            }
+            count_comment++;
+        }     
+       
+    }
+
+    btn_left_comment.onclick=function(){
+        if(count_comment > 0)
+        {
+            for(let i = count_comment+2;i>=count_comment-1;i--){
+                comment[i].className="customer";
+            } 
+            for(let i = count_comment+3;i<comment.length;i++){
+                comment[i].className="pro_none";
+            } 
+            count_comment--;
+        }
+    }
+   
+    /*Search*/ 
     let btn_search = document.getElementById("btn_search");
     btn_search.onclick = function(){
         let key = document.getElementById("search");
@@ -89,6 +137,8 @@ window.onload = function(){
             nav.className="flex";
         }
     }
+
+
 
 }
 

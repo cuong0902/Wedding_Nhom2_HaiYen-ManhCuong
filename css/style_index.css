@@ -15,6 +15,9 @@
     border-radius: var(--x);
     margin-top: var(--x);
     position: fixed;
+    animation-name: doiMau;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
 }
 .ads>div:first-child{
     left: 0.5%;
@@ -24,6 +27,10 @@
     right: 0.5%;
 }
 
+@keyframes doiMau{
+    from {background-color: darkcyan;}
+    to {background-color: black;}
+}
 
 /*main*/
 main{
@@ -223,6 +230,9 @@ section{
 }
 
 /*section comments*/
+.comments{
+    position: relative;
+}
 
 .customers{
     flex-wrap: wrap;
@@ -247,6 +257,17 @@ section{
     color: black;
     text-shadow: 2px 2px 2px rgb(51, 47, 47);
 }
+
+.next_comment>div:first-child{
+    position: absolute;
+    top: 30%;
+    left: 0;
+}
+.next_comment>div:last-child{
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
 /*section fix*/
 .phone{
     padding: 0;
@@ -254,7 +275,6 @@ section{
     margin: 0;
     border: 1px solid red;
     border-radius: 30px;
-    width: 10%;
     display: flex;
     align-items: center;
     top: 90%;
@@ -267,9 +287,10 @@ section{
     border: 1px solid pink;
     border-radius: 50%;
 }
-.phone>h3{
-    padding: 0;
-    margin: 0;
+.phone>div{
+    width: 80%;
+    font-weight: bold;
+    margin:0;
     color: blue;
 }
 
