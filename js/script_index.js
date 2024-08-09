@@ -1,5 +1,8 @@
 window.onload = function(){
-
+    let main = document.getElementById("main");
+    let footer = document.getElementById("footer");
+    let aside = document.getElementById("aside");
+    
     /* Ưu Đãi */
     /* Doi Hinh Trong Chi Tiet*/
     let main_thumb = document.getElementById("main_thumb");
@@ -68,6 +71,30 @@ window.onload = function(){
 
 
     /* Comment */
+    /*Hiện comment*/
+    let detail_comment = document.querySelector(".detail_comment");
+    let img_comment = document.querySelectorAll(".customer img");
+
+    for(let im of img_comment){
+        im.onclick=function(){
+            detail_comment.className="detail_comment";
+            let txt = im.getAttribute("rel");
+            let img_comment_main = document.getElementById("img_comment_main");
+            img_comment_main.src = `image/demo/BinhLuan_KhachHang/comment_${txt}.webp`;
+            if(txt === "quanglong_hongphuoc" || txt === "thienvinh_minhtrang")
+                img_comment_main.src = `image/demo/BinhLuan_KhachHang/comment_${txt}.png`;
+            
+
+
+            detail_comment.className="detail_comment opacity";
+            let btClose = document.getElementById("comment_close")
+            btClose.onclick=function(){
+                detail_comment.className="pro_none";
+            }
+        }
+    }
+
+    /* next comment */
     let comment = document.querySelectorAll(".customer");
     let btn_left_comment = document.querySelector(".next_comment>div:first-child");
     let btn_right_comment = document.querySelector(".next_comment>div:last-child");
@@ -103,6 +130,9 @@ window.onload = function(){
             count_comment--;
         }
     }
+
+
+
    
     /*Search*/ 
     let btn_search = document.getElementById("btn_search");
