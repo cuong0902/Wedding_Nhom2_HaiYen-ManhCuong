@@ -15,7 +15,9 @@ window.onload = function(){
                 main_thumb.src = `image/demo/promos/${txt}.jpg`;
             for(let i = 0;i<thumb.length;i++)
             {
-                thumb[i].src = `image/demo/promos/${txt}${i+1}.jpg`
+                thumb[i].src = `image/demo/promos/${txt}${i+1}.jpg`;
+                if(i === 2)
+                    thumb[i].src = `image/demo/promos/${txt}${i+1}.webp`;
             }
         }
     }
@@ -38,15 +40,55 @@ window.onload = function(){
                 main_thumb.src = `image/demo/promos/${txt}.jpg`;
             for(let i = 0;i<thumb.length;i++)
             {
-                thumb[i].src = `image/demo/promos/${txt}${i+1}.jpg`
+                thumb[i].src = `image/demo/promos/${txt}${i+1}.jpg`;
+                if(i === 2)
+                    thumb[i].src = `image/demo/promos/${txt}${i+1}.webp`;
             }
         }
     }
     /*Dong Giao Dien Chi Tiet */
 
-    let btClose = document.getElementById("close");
+    let btClose = document.getElementById("promos_close");
     btClose.onclick = function(){
         promo2.className = "pro_none";
         promo1.className = "promo";
     }
+
+
+    /*Search*/
+    
+    let btn_search = document.getElementById("btn_search");
+    btn_search.onclick = function(){
+        let key = document.getElementById("search");
+        let div_title = document.querySelectorAll(".title");
+        btn_search.parentElement.href="#";/*reset link tim kiem cu */
+        for(d of div_title){
+            d.style.border = "none";
+        } 
+        let txt = key.value;
+        let title = document.querySelectorAll(".title h3");
+        for(let t of title){     
+            if(txt != "" && t.innerText.includes(txt) === true)
+            {
+                t.parentElement.style.border = "2px solid red";
+                btn_search.parentElement.href=`#${t.parentElement.id}`;
+            }
+
+        }
+    }
+
+
+    /* Cố định Menu */
+    let nav = document.getElementById("nav");
+    nav.className="flex";
+    window.onscroll = function(){   
+        if (window.scrollY > 200){
+            nav.className="flex nav";
+        }
+        if (window.scrollY < 200){
+            nav.className="flex";
+        }
+    }
+
 }
+

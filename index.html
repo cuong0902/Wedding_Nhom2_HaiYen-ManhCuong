@@ -32,7 +32,7 @@
                 </li>
         </ul>
     </header>
-    <nav class="flex">
+    <nav id="nav" class="flex nav">
         <div></div>
         <div></div>
        <ul class="flex menu">
@@ -49,8 +49,8 @@
             <li><a href="contact.html">Liên Hệ</a></li>
        </ul>
         <div class="search">
-            <input type="search" placeholder="Nhập từ khóa"/>
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>    
+            <input id="search" type="search" placeholder="Nhập từ khóa"/>
+            <a href="#"><button id="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button></a>
         </div>
     </nav>
     <aside>
@@ -62,7 +62,7 @@
 
     <main id="main" >
         <section>
-            <div class="title">
+            <div id="seach_promos" rel="seach_promos" class="title">
                 <h3>Ưu Đãi Tháng Này</h3>
                 <hr>
             </div>
@@ -180,14 +180,14 @@
                             Đừng ngần ngại liên hệ với chúng tôi qua hotline 0974 03 7788 ngay hôm nay để được chúng tôi chăm chút cho từng chi tiết trong ngày viên mãn của đôi bạn nhé!
                         </p>
                     </div>
-                        <h3 id="close" class="close">X</h3>
+                        <h3 id="promos_close" class="close">X</h3>
                     </div>
             </div>
         </section>
 
 
         <section>
-            <div class="title">
+            <div id="search_Youtube" class="title">
                 <h3>Kênh YouTube</h3>
                 <hr>
             </div>
@@ -199,7 +199,7 @@
         </section>
 
         <section>
-            <div class="title">
+            <div id="search_Service" class="title">
                 <h3>Các Dịch Vụ</h3>
                 <hr>
             </div>
@@ -245,7 +245,7 @@
         </section>
 
         <section>
-            <div class="title">
+            <div id="search_blogs" class="title">
                 <h3>Tin Tức</h3>
                 <hr>
             </div>
@@ -255,7 +255,7 @@
                 <div class="new">
                     <img src="image/demo/blogs/blog_1.webp" alt="Tin Tức">
                 </div>
-                <p>Sang trọng và tinh tế với Lobby đón khách tại Cepella Park View</p>
+                <p> <a href="#"> Sang trọng và tinh tế với Lobby đón khách tại Cepella Park View </a></p>
                 <div class="day">
                     <h2>31</h2>
                     <h4>01/21</h4>
@@ -266,7 +266,7 @@
                 <div class="new">
                     <img src="image/demo/blogs/blog_3.jpg" alt="Tin Tức">
                 </div>
-                <p>Tiệc cưới sang trọng và đẳng cấp với ghế Tiffany</p>
+                <p><a href="#">Tiệc cưới sang trọng và đẳng cấp với ghế Tiffany</a></p>
                 <div class="day">
                     <h2>14</h2>
                     <h4>02/19</h4>
@@ -277,7 +277,7 @@
                 <div class="new">
                     <img src="image/demo/blogs/blog_2.webp" alt="Tin Tức">
                 </div>
-                <p>Venus - Không gian sảnh mới đẹp thanh lịch</p>
+                <p><a href="#">Venus - Không gian sảnh mới đẹp thanh lịch </a></p>
                 <div class="day">
                     <h2>20</h2>
                     <h4>12/19</h4>
@@ -288,7 +288,7 @@
                 <div class="new">
                     <img src="image/demo/blogs/blog_4.webp" alt="Tin Tức">
                 </div>
-                <p>Gợi ý khoảnh khắc tung hoa cưới đáng nhớ</p>
+                <p><a href="#">Gợi ý khoảnh khắc tung hoa cưới đáng nhớ</a></p>
                 <div class="day">
                     <h2>08</h2>
                     <h4>11/18</h4>
@@ -297,7 +297,7 @@
         </section>
 
         <section>
-            <div class="title">
+            <div id="search_comment" class="title">
                 <h3>Nhận Xét Khách Hàng</h3>
                 <hr>
             </div>

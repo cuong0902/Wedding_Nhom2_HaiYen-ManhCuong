@@ -134,7 +134,7 @@ ul.menu>li>a:hover{
 .search>input{
     font-size: large;
 }
-.search>button{
+.search button{
     font-size: large;
 }
 
@@ -158,4 +158,13 @@ textarea{
 #select{
     width: 160px;
     height: 25px;
+}
+
+
+/*dùng cho js gọi*/
+.nav{
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 3;
 }

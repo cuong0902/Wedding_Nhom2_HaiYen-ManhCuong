@@ -198,6 +198,10 @@ section{
     text-align: center;
 }
 
+.news a{
+    text-decoration: none;
+}
+
 .day{
     background-color: darkblue;
     width: 14%;
