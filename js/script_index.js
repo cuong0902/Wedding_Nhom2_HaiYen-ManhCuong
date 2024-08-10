@@ -84,8 +84,6 @@ window.onload = function(){
             if(txt === "quanglong_hongphuoc" || txt === "thienvinh_minhtrang")
                 img_comment_main.src = `image/demo/BinhLuan_KhachHang/comment_${txt}.png`;
             
-
-
             detail_comment.className="detail_comment opacity";
             let btClose = document.getElementById("comment_close")
             btClose.onclick=function(){
