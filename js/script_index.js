@@ -61,11 +61,19 @@ window.onload = function(){
     phone.onclick=function(){
         let phoneNumber = document.getElementById("phoneNumber");
         if(phoneNumber.className==="")
-            phoneNumber.className = "pro_none";
+            phoneNumber.className = "pro_none"; 
         else
-        phoneNumber.className = "";
+            phoneNumber.className = "";
     }
 
+
+    /* Blogs */
+    let btn_page = document.querySelectorAll(".page_blog div");
+    let element_blog = document.querySelectorAll(".news");
+
+    for(let p of btn_page){
+        
+    }
 
     /* Comment */
     /*Hiện comment*/

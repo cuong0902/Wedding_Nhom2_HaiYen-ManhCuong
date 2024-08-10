@@ -2,7 +2,7 @@
 
 /*Tiêu Đề search title*/
 .title>h3{
-    color: springgreen;
+    color: rgb(8, 202, 105);
     font-size: 2rem;
 }
 /*aside*/
@@ -227,6 +227,13 @@ section{
     font-size: 1rem;
     padding: 0;
     margin: 0;
+}
+
+.page_blog>div{
+    padding: 0.3rem;
+    margin: 0.1rem;
+    border: 1px solid black;
+    background-color: gray;
 }
 
 /*section comments*/
