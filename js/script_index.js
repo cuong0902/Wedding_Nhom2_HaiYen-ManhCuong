@@ -71,9 +71,27 @@ window.onload = function(){
     let btn_page = document.querySelectorAll(".page_blog div");
     let element_blog = document.querySelectorAll(".news");
 
-    for(let p of btn_page){
-        
+    for(let p =0; p < btn_page.length;p++){
+        for(let i = p; i < p+2;i++)
+        {
+            element_blog[i].className = `news ${p}`;
+        }
     }
+
+    for(let p of btn_page){
+        p.onclick = function(){
+            for(let e of element_blog)
+                if(e.className === `news ${p.value}`)
+                {
+                    e.className = `news ${p.value}`;
+                }
+                else{
+                    e.className = "pro_none";
+                }
+        }
+    }
+
+
 
     /* Comment */
     /*Hiện comment*/

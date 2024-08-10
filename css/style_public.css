@@ -141,7 +141,7 @@ ul.menu>li>a:hover{
 
 /*footer*/
 .bgfooter{
-    background: url(/image/demo/bgFooter.jpeg);
+    background: url(../image/demo/bgFooter.jpeg);
     font-size: 1.5rem;
     color: aliceblue;
 }
