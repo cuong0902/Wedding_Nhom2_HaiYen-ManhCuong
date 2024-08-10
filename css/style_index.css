@@ -294,7 +294,7 @@ section{
 }
 /*section fix*/
 .phone{
-    padding: 0;
+    padding:0;
     background-color: aliceblue;
     margin: 0;
     border: 1px solid red;
@@ -311,11 +311,13 @@ section{
     border: 1px solid pink;
     border-radius: 50%;
 }
-.phone>div{
-    width: 80%;
+.phone div{
     font-weight: bold;
     margin:0;
     color: blue;
+}
+.phone a{
+    text-decoration: none;
 }
 
 .back{
@@ -328,8 +330,4 @@ section{
     transition: 0.5s;
 }
 
-.opacity{
-    opacity: 1 !important;
-    z-index: 10;
-}
 

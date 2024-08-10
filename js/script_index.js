@@ -1,7 +1,4 @@
 window.onload = function(){
-    let main = document.getElementById("main");
-    let footer = document.getElementById("footer");
-    let aside = document.getElementById("aside");
     
     /* Ưu Đãi */
     /* Doi Hinh Trong Chi Tiet*/
@@ -83,7 +80,7 @@ window.onload = function(){
             img_comment_main.src = `image/demo/BinhLuan_KhachHang/comment_${txt}.webp`;
             if(txt === "quanglong_hongphuoc" || txt === "thienvinh_minhtrang")
                 img_comment_main.src = `image/demo/BinhLuan_KhachHang/comment_${txt}.png`;
-            
+
             detail_comment.className="detail_comment opacity";
             let btClose = document.getElementById("comment_close")
             btClose.onclick=function(){
@@ -129,9 +126,7 @@ window.onload = function(){
         }
     }
 
-
-
-   
+    
     /*Search*/ 
     let btn_search = document.getElementById("btn_search");
     btn_search.onclick = function(){
@@ -153,7 +148,6 @@ window.onload = function(){
         }
     }
 
-
     /* Cố định Menu */
     let nav = document.getElementById("nav");
     nav.className="flex";
@@ -166,7 +160,38 @@ window.onload = function(){
         }
     }
 
+    /* Đóng form */
+    let btn_confirm = document.getElementById("btn_confirm");
+    let form = document.querySelector(".form_confirm");
+    btn_confirm.onclick=function(){
+        form.className="pro_none";
+    }
+    /* Gửi Form*/
+    let name_cus = document.getElementById("name_cus");
+    let phone_cus = document.getElementById("phone_cus");
+    let email_cus = document.getElementById("email_cus");
+    let type_cus = document.getElementById("type_cus");
+    let request_cus = document.getElementById("request_cus");
 
+    let name_cus_info = document.getElementById("name_cus_info");
+    let phone_cus_info = document.getElementById("phone_cus_info");
+    let email_cus_info = document.getElementById("email_cus_info");
+    let type_cus_info = document.getElementById("type_cus_info");
+    let request_cus_info = document.getElementById("request_cus_info");
 
-}
+    let btn_submit = document.getElementById("btn_submit");
+
+    btn_submit.onclick = function(){
+        if(name_cus.value !== "" && phone_cus.value !== "") {
+            form.className = "form_confirm";
+            name_cus_info.innerText = name_cus.value;
+            phone_cus_info.innerText = phone_cus.value;
+            email_cus_info.innerText = email_cus.value;
+            type_cus_info.innerText = type_cus.value;
+            request_cus_info.innerText = request_cus.value;
+        } else {
+            alert("Vui lòng điền đầy đủ thông tin tên và số điện thoại.");
+            }
+        }
+}   
 
