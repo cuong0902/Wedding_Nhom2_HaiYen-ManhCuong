@@ -68,28 +68,34 @@ window.onload = function(){
 
 
     /* Blogs */
+   // Lấy tất cả các nút trang và các phần tử blog
     let btn_page = document.querySelectorAll(".page_blog div");
     let element_blog = document.querySelectorAll(".news");
 
-    for(let p =0; p < btn_page.length;p++){
-        for(let i = p; i < p+2;i++)
-        {
-            element_blog[i].className = `news ${p}`;
+    // Gán class cho các phần tử blog theo số trang
+    for (let p = 0; p < btn_page.length; p++) {
+        let page = btn_page[p].getAttribute("rel");
+        for (let i = p * 3; i < (p + 1) * 3 && i < element_blog.length; i++) {
+            element_blog[i].className = "news page_" + page;
         }
     }
 
-    for(let p of btn_page){
-        p.onclick = function(){
-            for(let e of element_blog)
-                if(e.className === `news ${p.value}`)
-                {
-                    e.className = `news ${p.value}`;
+    // Thêm sự kiện onclick cho các nút trang
+    for (let p = 0; p < btn_page.length; p++) {
+        btn_page[p].onclick = function() {
+            let page = btn_page[p].getAttribute("rel");
+            for (let e = 0; e < element_blog.length; e++) {
+                if (Math.floor(e / 3) == parseInt(page)) {
+                    element_blog[e].className = "news page_" + page;
+                } else {
+                    element_blog[e].className = "news pro_none";
                 }
-                else{
-                    e.className = "pro_none";
-                }
-        }
+            }
+        };
     }
+
+    // Hiển thị trang đầu tiên mặc định
+    btn_page[0].click()
 
 
 
