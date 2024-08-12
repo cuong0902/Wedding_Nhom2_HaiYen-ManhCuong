@@ -12,121 +12,156 @@
     <link rel="stylesheet" href="css/style_public.css">
 </head>
 <body>
-    <header id="header" class="flex header">
-        <img src="image/demo/logo.webp" alt="Logo">
-        <h1 class="subject">Nhà hàng tiệc cưới Capella Park View</h1>
-        <ul class="flex">
-                <li class="notices"><a href="#"><i class="fa-solid fa-bell"></i></a>
-                    <ul class="notice">
-                        <li><span style="color: gold">Trần Hải Yến</span> vừa phản hồi bình luận của bạn</li>
-                        <li>Đơn đặt bàn<span style="color: gold"> #2024</span> của bạn đã được xử lí</li>
-                    </ul>
-                </li>
-                <li class="user"><a href="#"><i class="fa-solid fa-user"></i></a>
-                    <ul class="userDetail">
-                        <li><span style="color: aqua">Tên người dùng:</span> Nguyễn Mạnh Cường</li>
-                        <li><span style="color: aqua">SDT:</span> 0338638774</li>
-                        <li><span style="color: aqua">Email:</span> 2051052015cuong@ou.edu.vn</li>
-                    </ul>
-                </li>
-        </ul>
-    </header>
-    <nav class="flex">
-        <div></div>
-        <div></div>
-       <ul class="flex menu">
-            <li><a href="index.html"><i class="fa-solid fa-house"></i>Trang Chủ</a></li>
-            <li class="sub"><a href="Service/TiecCuoi.html">Dịch Vụ Tiệc</a>
-                <ul class="menu flex submenu">
-                    <li><a href="Service/TiecCongTy.html">Tiệc Công Ty</a></li>
-                    <li><a href="Service/TiecCuoi.html">Tiệc Cưới</a></li>
-                    <li><a href="Service/TiecNgoai.html">Tiệc Ngoài</a></li>
-                    <li><a href="Service/TiecCaNhan.html">Tiệc Cá Nhân</a></li>
-                </ul>
-            </li>
-            <li><a href="blogs.html">Tin Tức</a></li>
-            <li><a href="contact.html">Liên Hệ</a></li>
-       </ul>
-        <div class="search">
-            <input type="search" placeholder="Nhập từ khóa"/>
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>    
-        </div>
-    </nav>
-
-    <footer id="footer">
-        <form action="" class="form_confirm pro_none">
-            <div></div>
-            <div class="form_main">
-                <h2>Thông Tin Liên Hệ</h2>
-                <table>
-                    <tr>
-                        <td class="name_object">Họ Tên:</td>
-                        <td id="name_cus_info" class="name_info">Nguyễn Mạnh Cường</td>
-                    </tr>
-                    <tr>
-                        <td class="name_object">Số Điện Thoại:</td>
-                        <td id="phone_cus_info" class="name_info">0338638774</td>
-                    </tr>
-                    <tr>
-                        <td class="name_object">Email:</td>
-                        <td id="email_cus_info" class="name_info">2051052015cuong@ou.edu.vn</td>
-                    </tr>
-                    <tr>
-                        <td class="name_object">Loại Tiệc:</td>
-                        <td id="type_cus_info" class="name_info">Tiệc Cưới</td>
-                    </tr>
-                    <tr>
-                        <td class="name_object">Yêu Cầu:</td>
-                        <td id="request_cus_info" class="name_info"><textarea >Muốn tổ chức lúc sáng và thuê vũ công ca nhạc, hỗ trợ ánh sáng đèn sân khấu</textarea>
-                        </td>
-                    </tr>
-                </table>
-                <p>Chúng tôi sẽ liên hệ bạn sớm nhất. Chúc bạn một ngày tốt lành!</p>
-                <div id="btn_confirm">Xác Nhận</div>
-
-            </div>
-            <div></div>
-        </form>
-
-        <div class="flex bgfooter">
-            <ul >
-                <li>Nhà Hàng Tiệc Cưới Cepella ParkView</li>
-                <li>Địa Chỉ: KDC Nhơn Đức, Nhà Bè, TP. Hồ Chí Minh</li>
-                <li>Điện Thoại: 0338638774</li>
-                <li>Email: Capella@gmail.com</li>
-            </ul>
-            <div >
-                <p>TƯ VẤN ĐẶT TIỆC</p>
-                <div class="input">
-                    <input id="name_cus" type="text" placeholder="Họ và Tên">
-                    <input id="phone_cus" type="text" placeholder="Số Điện Thoại">
+    <main>
+        <section>
+            <div class="blogs flex">
+                <div class="news">
+                    <div class="new">
+                        <img src="image/demo/blogs/blog_1.webp" alt="Tin Tức">
+                    </div>
+                    <p> <a href="blogs.html"> Sang trọng và tinh tế với Lobby đón khách tại Cepella Park View </a></p>
+                    <div class="day">
+                        <h2>31</h2>
+                        <h4>01/21</h4>
+                    </div>
                 </div>
-                <div class="input">
-                    <input id="email_cus"  type="text" placeholder="Email">
-                    <select id="type_cus">
-                        <option>-Chọn Loại Tiệc-</option>
-                        <option>Tiệc Cưới</option>
-                        <option>Tiệc Công Ty</option>
-                        <option>Tiệc Ngoài Trời</option>
-                        <option>Dịch Vụ Khác</option>
-                    </select>
-                </div>
-                <div>
-                    <textarea name="" id="request_cus" placeholder="Yêu cầu khác"></textarea>
-                </div>
-
-                <button id="btn_submit">Gửi Liên Hệ</button>
-  
-            </div>
-            <div >
-                <h3 style="height: 20%;">Địa chỉ Nhà hàng</h3>
-                <iframe width="90%" height="80%" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15677.82484184881!2d106.6902291!3d10.7763284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3ae35e3725%3A0x20c5174a47f97be3!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBN4bufIFRQLkhDTSAtIEPGoSBz4bufIDE!5e0!3m2!1svi!2s!4v1722791358922!5m2!1svi!2s"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
-        </div>
-
-
         
-       
-    </footer>
+                <div class="news">
+                    <div class="new">
+                        <img src="image/demo/blogs/blog_3.jpg" alt="Tin Tức">
+                    </div>
+                    <p><a href="blogs.html">Tiệc cưới sang trọng và đẳng cấp với ghế Tiffany</a></p>
+                    <div class="day">
+                        <h2>14</h2>
+                        <h4>02/19</h4>
+                    </div>
+                </div>
+        
+                <div class="news">
+                    <div class="new">
+                        <img src="image/demo/blogs/blog_2.webp" alt="Tin Tức">
+                    </div>
+                    <p><a href="blogs.html">Venus - Không gian sảnh mới đẹp thanh lịch </a></p>
+                    <div class="day">
+                        <h2>20</h2>
+                        <h4>12/19</h4>
+                    </div>
+                </div>
+        
+                <div class="news">
+                    <div class="new">
+                        <img src="image/demo/blogs/blog_4.webp" alt="Tin Tức">
+                    </div>
+                    <p><a href="blogs.html">Gợi ý khoảnh khắc tung hoa cưới đáng nhớ</a></p>
+                    <div class="day">
+                        <h2>08</h2>
+                        <h4>11/18</h4>
+                    </div>
+                </div>
+        
+                <div class="news">
+                    <div class="new">
+                        <img src="image/demo/blogs/blog_5.jpg" alt="Tin Tức">
+                    </div>
+                    <p><a href="blogs.html">Tiệc cưới sang trọng với lan hồ điệp</a></p>
+                    <div class="day">
+                        <h2>15</h2>
+                        <h4>12/18</h4>
+                    </div>
+                </div>
+        
+                <div class="news">
+                    <div class="new">
+                        <img src="image/demo/blogs/blog_6.jpg" alt="Tin Tức">
+                    </div>
+                    <p><a href="blogs.html">Xu hướng trang trí tiệc cưới bàn dài</a></p>
+                    <div class="day">
+                        <h2>11</h2>
+                        <h4>06/18</h4>
+                    </div>
+                </div>
+        
+                <div class="news">
+                    <div class="new">
+                        <img src="image/demo/blogs/blog_7.jpg" alt="Tin Tức">
+                    </div>
+                    <p><a href="blogs.html">Không gian lý tưởng cho các buổi trình diễn</a></p>
+                    <div class="day">
+                        <h2>24</h2>
+                        <h4>05/18</h4>
+                    </div>
+                </div>
+        
+                <div class="news">
+                    <div class="new">
+                        <img src="image/demo/blogs/blog_8.jpg" alt="Tin Tức">
+                    </div>
+                    <p><a href="blogs.html">Hưng Thịnh Land - Lễ tổng kết hoạt động kinh doanh quý I</a></p>
+                    <div class="day">
+                        <h2>25</h2>
+                        <h4>04/18</h4>
+                    </div>
+                </div>
+        
+                <div class="news">
+                    <div class="new">
+                        <img src="image/demo/blogs/blog_9.jpg" alt="Tin Tức">
+                    </div>
+                    <p><a href="blogs.html">Grab car -  Họp mặt đối tác quý II</a></p>
+                    <div class="day">
+                        <h2>18</h2>
+                        <h4>04/18</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section style="margin-top: 10%;">
+            <div id="promo2" class="promos">
+                <div class="thumb_pro">
+                    <img rel="TiecCuoi_" src="image/demo/blogs/blog_6.jpg" alt="">
+                    <img rel="Gala_" src="image/demo/blogs/blog_7.jpg" alt="">
+                    <img rel="HoiNghi_" src="image/demo/blogs/blog_10.jpg" alt="">
+                    <img rel="SinhNhat_" src="image/demo/blogs/blog_3.jpg" alt="">
+                    <img rel="SinhNhat_" src="image/demo/blogs/blog_9.jpg" alt="">
+                </div>
+
+                <div class="pro_detail">
+                    <h2>Xu hướng trang tri tiệc bàn dài</h2>
+                    <div class="div_img">
+                        <img id="main_thumb" src="image/demo/blogs/blog_1.webp" alt="">
+                    </div>
+                    <div>
+                        <p>Nếu bàn tiệc tròn cổ điển với sức chứa tối đa từ 10 - 12 người và bị giới hạn không gian trang trí thì bàn tiệc dài lại là điểm nhấn của các sự kiện khi mọi diện tích đều được sử dụng triệt để.</p>
+                        <ul>
+                            <li>Xu hướng sắp xếp và trang trí bàn tiệc dài trong đám cưới đang dần được các cặp đôi ưa chuộng trong thời gian gần đây.</li>
+                            <li>Bàn tiệc dài không chỉ giúp việc trang trí phong phú hơn mà còn mang lại cảm giác ấm cúng, gần gũi hơn cho thực khách. Các khách mời trong tiệc được trải nghiệm một không gian lãng mạn, mới lạ, khoảng cách người đối diện thật gần, mang lại cảm giác ấm áp thân mật.</li>
+                            <li>Tặng màn hình LED suốt tiệc và màn sao sân khấu</li>
+                            <li>Cùng dạo qua một số cách trang trí bàn tiệc dài tại Capella Park View để cảm nhận rõ hơn sự sang trọng mà xu hướng này mang lại nhé!</li>
+                            <li>Voucher quà tăng dịch vụ thiệp cưới, váy cưới, studio,...</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="thumb_thumb">
+                        <img src="image/demo/blogs/blog_6/blog_6_hinh_1.jpg" alt="">
+                        <img src="image/demo/blogs/blog_6/blog_6_hinh_2.jpg"  alt="">
+                        <img src="image/demo/blogs/blog_6/blog_6_hinh_3.webp"  alt="">
+                        <img src="image/demo/blogs/blog_6/blog_6_hinh_3.webp"  alt="">
+                        <img src="image/demo/blogs/blog_6/blog_6_hinh_3.webp"  alt="">
+                        <img src="image/demo/blogs/blog_6/blog_6_hinh_3.webp"  alt="">
+                    </div>
+
+                    <div>
+                        <p>
+                            Với ưu điểm đa dạng về phong cách trang trí, sảnh tiệc với bàn tiệc dài sẽ thể hiện được gu thẩm mỹ tinh tế của chủ tiệc đến khách mời. Trong ánh sáng huyền ảo của nến và hoa, không gian tiệc tạo được dấu ấn riêng và truyền cảm hứng cho tất cả quan khách tham dự.
+                        </p>
+                    </div>
+                        <h3 id="promos_close" class="close">X</h3>
+                    </div>
+            </div>
+        </section>
+    </main>
+    
 </body>
 </html>
