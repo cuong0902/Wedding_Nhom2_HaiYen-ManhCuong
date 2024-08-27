@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+
+}
+
+.news-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.news-item {
+    position: relative;
+    width: 300px;
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+}
+
+.news-item .date {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.news-item p {
+    padding: 15px;
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+}
+/*  detailed news */
+.news-detail {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.news-detail-left {
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 20px;
+}
+
+.news-detail-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.news-detail-right {
+    flex: 2;
+}
+
+.news-detail-right h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.news-info {
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.news-info .date, .news-info .comments {
+    margin-right: 15px;
+}
+
+.news-detail-right p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.news-detail-left img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s; /* Chuyển động khi phóng to hình ảnh */
+    cursor: pointer; /* Thêm con trỏ để chỉ ra rằng hình ảnh có thể tương tác */
+}
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 35%;
+    border-radius: 10px;
+}
+.modal-content p {
+    flex: 1; /* Cho phép đoạn văn chiếm hết không gian còn lại bên phải */
+    text-align: right; /* Căn văn bản sang bên phải */
+    margin: 0; /* Loại bỏ khoảng cách mặc định */
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* tuvan*/
+
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.contact-info {
+    width: 45%;
+    padding-right: 20px;
+}
+
+.contact-info h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 8px 0;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: bold;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%; /* Đảm bảo độ rộng của các phần tử giống nhau */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Đảm bảo padding không ảnh hưởng đến kích thước */
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.recaptcha {
+    display: flex;
+    margin-bottom: 15px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 14px; /* Giảm kích thước tổng thể */
+}
+
+.recaptcha input[type="checkbox"] {
+    width: 16px; /* Kích thước nhỏ hơn */
+    height: 16px; /* Kích thước nhỏ hơn */
+    margin-right: 8px; /* Giảm khoảng cách giữa checkbox và văn bản */
+}
+
+.recaptcha label {
+    color: #333;
+    font-size: 16px; /* Tăng kích thước văn bản */
+    line-height: 1.5; /* Giúp văn bản dài hơn */
+}

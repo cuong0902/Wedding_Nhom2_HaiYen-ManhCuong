@@ -23,7 +23,6 @@ window.onload = function(){
         }
     }
 
-
     /* Thay Hinh Trong Chi Tiet*/
     let promo1 = document.getElementById("promo1")
     let promo2 = document.getElementById("promo2")
@@ -61,7 +60,7 @@ window.onload = function(){
     phone.onclick=function(){
         let phoneNumber = document.getElementById("phoneNumber");
         if(phoneNumber.className==="")
-            phoneNumber.className = "pro_none"; 
+            phoneNumber.className = "hide"; 
         else
             phoneNumber.className = "";
     }
@@ -88,7 +87,7 @@ window.onload = function(){
                 if (Math.floor(e / 3) == parseInt(page)) {
                     element_blog[e].className = "news page_" + page;
                 } else {
-                    element_blog[e].className = "news pro_none";
+                    element_blog[e].className = "news hide";
                 }
             }
         };
@@ -106,7 +105,7 @@ window.onload = function(){
 
     for(let im of img_comment){
         im.onclick=function(){
-            detail_comment.className="detail_comment";
+            detail_comment.className="detail_comment show_form";
             let txt = im.getAttribute("rel");
             let img_comment_main = document.getElementById("img_comment_main");
             img_comment_main.src = `image/demo/BinhLuan_KhachHang/comment_${txt}.webp`;
@@ -116,9 +115,10 @@ window.onload = function(){
             detail_comment.className="detail_comment opacity";
             let btClose = document.getElementById("comment_close")
             btClose.onclick=function(){
-                detail_comment.className="pro_none";
+                detail_comment.className="hide";
             }
         }
+
     }
 
     /* next comment */
@@ -196,7 +196,8 @@ window.onload = function(){
     let btn_confirm = document.getElementById("btn_confirm");
     let form = document.querySelector(".form_confirm");
     btn_confirm.onclick=function(){
-        form.className="pro_none";
+        form.className="hide";
+        form.parentElement.className="hide"
     }
     /* Gửi Form*/
     let name_cus = document.getElementById("name_cus");
@@ -216,6 +217,7 @@ window.onload = function(){
     btn_submit.onclick = function(){
         if(name_cus.value !== "" && phone_cus.value !== "") {
             form.className = "form_confirm";
+            form.parentElement.className="show_form"
             name_cus_info.innerText = name_cus.value;
             phone_cus_info.innerText = phone_cus.value;
             email_cus_info.innerText = email_cus.value;
