@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="css/style_index.css">
     <link rel="stylesheet" href="css/style_public.css">
     <script src="js/script_index.js"></script>
+    <script src="js/script_viewport.js"></script>
 </head>
 <body style="background-color: rgba(228, 228, 251, 0.6);">
     <header id="header" class="flex header">
@@ -32,6 +33,7 @@
                 </li>
         </ul>
     </header>
+
     <nav id="nav" class="flex nav">
         <div></div>
         <div></div>
@@ -53,6 +55,23 @@
             <a href="#"><button id="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button></a>
         </div>
     </nav>
+
+    <div id="nav_mobile" class="nav_mobile" >
+        <button id="btn_menu_mobile">Menu</button>  
+        <ul class="menu hide" id="mobile_menu">
+                <button id="close_menu_mobile">&times;</button>
+                <li><a href="index.html"><i class="fa-solid fa-house"></i>Trang Chủ</a></li>
+
+                <li><a href="Service/TiecCongTy.html">Tiệc Công Ty</a></li>
+                <li><a href="Service/TiecCuoi.html">Tiệc Cưới</a></li>
+                <li><a href="Service/TiecNgoai.html">Tiệc Ngoài</a></li>
+                <li><a href="Service/TiecCaNhan.html">Tiệc Cá Nhân</a></li>
+            
+                <li><a href="blogs.html">Tin Tức</a></li>
+                <li><a href="contact.html">Liên Hệ</a></li>
+        </ul>
+    </div>
+
     <aside id="aside">
         <div class="ads">
             <div>LIÊN HỆ QUẢNG CÁO</div>
@@ -228,7 +247,7 @@
                     </div>
                 </div>
                 <div class="service svCTBottom">
-                    <a href="Service/TiecNgoai.html" target="_blank">
+                    <a href="Service/TiecCongTy.html" target="_blank">
                         <img src="image/demo/banner_TiecChieuDai_gal4.webp" alt="Tiệc Cưới">
                     </a>
                     <p >Tiệc Chiêu Đãi</p>
@@ -251,103 +270,105 @@
             </div>
         </section>
         <section >
-            <div class="blogs flex">
-                <div class="news">
-                    <div class="new">
-                        <img src="image/demo/blogs/blog_1.webp" alt="Tin Tức">
+            <div class="blogs ">
+                <div class="page_1 blog flex">
+                    <div class="news">
+                        <div class="new">
+                            <img src="image/demo/blogs/blog_1.webp" alt="Tin Tức">
+                        </div>
+                        <p> <a href="blogs.html"> Sang trọng và tinh tế với Lobby đón khách tại Cepella Park View </a></p>
+                        <div class="day">
+                            <h2>31</h2>
+                            <h4>01/21</h4>
+                        </div>
                     </div>
-                    <p> <a href="blogs.html"> Sang trọng và tinh tế với Lobby đón khách tại Cepella Park View </a></p>
-                    <div class="day">
-                        <h2>31</h2>
-                        <h4>01/21</h4>
+                    <div class="news">
+                        <div class="new">
+                            <img src="image/demo/blogs/blog_3.jpg" alt="Tin Tức">
+                        </div>
+                        <p><a href="blogs.html">Tiệc cưới sang trọng và đẳng cấp với ghế Tiffany</a></p>
+                        <div class="day">
+                            <h2>14</h2>
+                            <h4>02/19</h4>
+                        </div>
                     </div>
-                </div>
-
-                <div class="news">
-                    <div class="new">
-                        <img src="image/demo/blogs/blog_3.jpg" alt="Tin Tức">
-                    </div>
-                    <p><a href="blogs.html">Tiệc cưới sang trọng và đẳng cấp với ghế Tiffany</a></p>
-                    <div class="day">
-                        <h2>14</h2>
-                        <h4>02/19</h4>
-                    </div>
-                </div>
-
-                <div class="news">
-                    <div class="new">
-                        <img src="image/demo/blogs/blog_2.webp" alt="Tin Tức">
-                    </div>
-                    <p><a href="blogs.html">Venus - Không gian sảnh mới đẹp thanh lịch </a></p>
-                    <div class="day">
-                        <h2>20</h2>
-                        <h4>12/19</h4>
-                    </div>
-                </div>
-
-                <div class="news">
-                    <div class="new">
-                        <img src="image/demo/blogs/blog_4.webp" alt="Tin Tức">
-                    </div>
-                    <p><a href="blogs.html">Gợi ý khoảnh khắc tung hoa cưới đáng nhớ</a></p>
-                    <div class="day">
-                        <h2>08</h2>
-                        <h4>11/18</h4>
+                    <div class="news">
+                        <div class="new">
+                            <img src="image/demo/blogs/blog_2.webp" alt="Tin Tức">
+                        </div>
+                        <p><a href="blogs.html">Venus - Không gian sảnh mới đẹp thanh lịch </a></p>
+                        <div class="day">
+                            <h2>20</h2>
+                            <h4>12/19</h4>
+                        </div>
                     </div>
                 </div>
 
-                <div class="news">
-                    <div class="new">
-                        <img src="image/demo/blogs/blog_5.jpg" alt="Tin Tức">
+                <div class="page_2 blog hide">
+                    <div class="news">
+                        <div class="new">
+                            <img src="image/demo/blogs/blog_4.webp" alt="Tin Tức">
+                        </div>
+                        <p><a href="blogs.html">Gợi ý khoảnh khắc tung hoa cưới đáng nhớ</a></p>
+                        <div class="day">
+                            <h2>08</h2>
+                            <h4>11/18</h4>
+                        </div>
                     </div>
-                    <p><a href="blogs.html">Tiệc cưới sang trọng với lan hồ điệp</a></p>
-                    <div class="day">
-                        <h2>15</h2>
-                        <h4>12/18</h4>
+
+                    <div class="news">
+                        <div class="new">
+                            <img src="image/demo/blogs/blog_5.jpg" alt="Tin Tức">
+                        </div>
+                        <p><a href="blogs.html">Tiệc cưới sang trọng với lan hồ điệp</a></p>
+                        <div class="day">
+                            <h2>15</h2>
+                            <h4>12/18</h4>
+                        </div>
+                    </div>
+
+                    <div class="news">
+                        <div class="new">
+                            <img src="image/demo/blogs/blog_6.jpg" alt="Tin Tức">
+                        </div>
+                        <p><a href="blogs.html">Xu hướng trang trí tiệc cưới bàn dài</a></p>
+                        <div class="day">
+                            <h2>11</h2>
+                            <h4>06/18</h4>
+                        </div>
                     </div>
                 </div>
 
-                <div class="news">
-                    <div class="new">
-                        <img src="image/demo/blogs/blog_6.jpg" alt="Tin Tức">
+                <div class="page_3 blog hide">
+                    <div class="news">
+                        <div class="new">
+                            <img src="image/demo/blogs/blog_7.jpg" alt="Tin Tức">
+                        </div>
+                        <p><a href="blogs.html">Không gian lý tưởng cho các buổi trình diễn</a></p>
+                        <div class="day">
+                            <h2>24</h2>
+                            <h4>05/18</h4>
+                        </div>
                     </div>
-                    <p><a href="blogs.html">Xu hướng trang trí tiệc cưới bàn dài</a></p>
-                    <div class="day">
-                        <h2>11</h2>
-                        <h4>06/18</h4>
+                    <div class="news">
+                        <div class="new">
+                            <img src="image/demo/blogs/blog_8.jpg" alt="Tin Tức">
+                        </div>
+                        <p><a href="blogs.html">Hưng Thịnh Land - Lễ tổng kết hoạt động kinh doanh quý I</a></p>
+                        <div class="day">
+                            <h2>25</h2>
+                            <h4>04/18</h4>
+                        </div>
                     </div>
-                </div>
-
-                <div class="news">
-                    <div class="new">
-                        <img src="image/demo/blogs/blog_7.jpg" alt="Tin Tức">
-                    </div>
-                    <p><a href="blogs.html">Không gian lý tưởng cho các buổi trình diễn</a></p>
-                    <div class="day">
-                        <h2>24</h2>
-                        <h4>05/18</h4>
-                    </div>
-                </div>
-
-                <div class="news">
-                    <div class="new">
-                        <img src="image/demo/blogs/blog_8.jpg" alt="Tin Tức">
-                    </div>
-                    <p><a href="blogs.html">Hưng Thịnh Land - Lễ tổng kết hoạt động kinh doanh quý I</a></p>
-                    <div class="day">
-                        <h2>25</h2>
-                        <h4>04/18</h4>
-                    </div>
-                </div>
-
-                <div class="news">
-                    <div class="new">
-                        <img src="image/demo/blogs/blog_9.jpg" alt="Tin Tức">
-                    </div>
-                    <p><a href="blogs.html">Grab car -  Họp mặt đối tác quý II</a></p>
-                    <div class="day">
-                        <h2>18</h2>
-                        <h4>04/18</h4>
+                    <div class="news">
+                        <div class="new">
+                            <img src="image/demo/blogs/blog_9.jpg" alt="Tin Tức">
+                        </div>
+                        <p><a href="blogs.html">Grab car -  Họp mặt đối tác quý II</a></p>
+                        <div class="day">
+                            <h2>18</h2>
+                            <h4>04/18</h4>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -355,9 +376,9 @@
             <div class="flex">
                 <div></div>
                 <div class="flex page_blog">
-                    <div rel="0" class="page_1">1</div>
-                    <div rel="1" class="page_2">2</div>
-                    <div rel="2" class="page_3">3</div>
+                    <div rel="1" class="page_1"><button class="active">1</button></div>
+                    <div rel="2" class="page_2"><button>2</button></div>
+                    <div rel="3" class="page_3"><button>3</button></div>
                 </div>
                 <div></div>
             </div>
@@ -450,17 +471,12 @@
                 <div id="phoneNumber" class=""><a href="tel:0338638774">0338638774</a></div>     
             </div>
         
-            <div class="back">
-                <button>
-                    <a href="#header" style="transition-duration: 3s;">
+            <div >
+                <button class="back">
                         <i class="fa-solid fa-up-long" style="font-size: 1.5rem"></i>
-                    </a>
                 </button>
             </div>
         </section>
-
-        
-
     </main>
   
     <div class="hide">
@@ -499,11 +515,9 @@
         </form>
     </div> 
     
-    <footer id="footer">
-        
-
+    <footer id="footer" >
         <div class="flex bgfooter">
-            <ul >
+            <ul style="list-style-type: none;">
                 <li>Nhà Hàng Tiệc Cưới Cepella ParkView</li>
                 <li>Địa Chỉ: KDC Nhơn Đức, Nhà Bè, TP. Hồ Chí Minh</li>
                 <li>Điện Thoại: 0338638774</li>
@@ -532,10 +546,11 @@
                 <button id="btn_submit">Gửi Liên Hệ</button>
   
             </div>
-            <div >
-                <h3 style="height: 20%;">Địa chỉ Nhà hàng</h3>
-                <iframe width="90%" height="80%" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15677.82484184881!2d106.6902291!3d10.7763284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3ae35e3725%3A0x20c5174a47f97be3!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBN4bufIFRQLkhDTSAtIEPGoSBz4bufIDE!5e0!3m2!1svi!2s!4v1722791358922!5m2!1svi!2s"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <h3 style="height: 2rem; padding: 0; margin: 0;">Địa chỉ Nhà hàng</h3>
+                <iframe  width="450vw" height="200vh" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15677.82484184881!2d106.6902291!3d10.7763284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3ae35e3725%3A0x20c5174a47f97be3!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBN4bufIFRQLkhDTSAtIEPGoSBz4bufIDE!5e0!3m2!1svi!2s!4v1722791358922!5m2!1svi!2s"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+            <div style="width: 0.1%;"></div>
         </div>         
     </footer>
 

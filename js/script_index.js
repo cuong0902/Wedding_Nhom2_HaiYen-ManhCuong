@@ -67,37 +67,29 @@ window.onload = function(){
 
 
     /* Blogs */
-   // Lấy tất cả các nút trang và các phần tử blog
-    let btn_page = document.querySelectorAll(".page_blog div");
-    let element_blog = document.querySelectorAll(".news");
-
-    // Gán class cho các phần tử blog theo số trang
-    for (let p = 0; p < btn_page.length; p++) {
-        let page = btn_page[p].getAttribute("rel");
-        for (let i = p * 3; i < (p + 1) * 3 && i < element_blog.length; i++) {
-            element_blog[i].className = "news page_" + page;
-        }
-    }
-
-    // Thêm sự kiện onclick cho các nút trang
-    for (let p = 0; p < btn_page.length; p++) {
-        btn_page[p].onclick = function() {
-            let page = btn_page[p].getAttribute("rel");
-            for (let e = 0; e < element_blog.length; e++) {
-                if (Math.floor(e / 3) == parseInt(page)) {
-                    element_blog[e].className = "news page_" + page;
-                } else {
-                    element_blog[e].className = "news hide";
-                }
+    let btn_page = document.querySelectorAll(".page_blog button");
+    for(let btn of btn_page){
+        btn.addEventListener("click", function(){
+            for(let btn of btn_page){
+                btn.classList.remove("active")
             }
-        };
+            btn.classList.add("active")
+
+            let number_page = btn.parentElement.getAttribute("rel")
+            let all_page = document.querySelectorAll(".blog")
+            
+            for(let a of all_page){  
+                a.classList.remove("flex")
+                a.classList.add("hide")
+            }
+
+            let page_show = document.querySelector(`.page_${number_page}`)
+            page_show.classList.remove("hide")
+            page_show.classList.add("flex")
+        }) 
     }
 
-    // Hiển thị trang đầu tiên mặc định
-    btn_page[0].click()
-
-
-
+    
     /* Comment */
     /*Hiện comment*/
     let detail_comment = document.querySelector(".detail_comment");
@@ -105,6 +97,12 @@ window.onload = function(){
 
     for(let im of img_comment){
         im.onclick=function(){
+
+            window.scrollBy({
+                top: 100, 
+                behavior: 'smooth' 
+            });
+
             detail_comment.className="detail_comment show_form";
             let txt = im.getAttribute("rel");
             let img_comment_main = document.getElementById("img_comment_main");
@@ -128,7 +126,7 @@ window.onload = function(){
     let count_comment = 0;
 
     for (let i = 4; i < comment.length; i++) {
-        comment[i].className="pro_none";
+        comment[i].className="hide";
     }
 
     btn_right_comment.onclick = function(){
@@ -136,7 +134,7 @@ window.onload = function(){
         let end = count_comment + 4;
         if(count_comment<comment.length && end < comment.length)
         {          
-            comment[count_comment].className="pro_none";      
+            comment[count_comment].className="hide";      
             for(let i = start;i<=end;i++){
                 comment[i].className="customer";
             }
@@ -152,13 +150,21 @@ window.onload = function(){
                 comment[i].className="customer";
             } 
             for(let i = count_comment+3;i<comment.length;i++){
-                comment[i].className="pro_none";
+                comment[i].className="hide";
             } 
             count_comment--;
         }
     }
-
     
+
+    /* go to top */
+    let back = document.querySelector(".back")
+    back.addEventListener("click",function(){
+        window.scrollTo({
+            top: 0, behavior: 'smooth' // Thêm hiệu ứng cuộn mượt
+        });
+    })
+
     /*Search*/ 
     let btn_search = document.getElementById("btn_search");
     btn_search.onclick = function(){
@@ -222,7 +228,10 @@ window.onload = function(){
             phone_cus_info.innerText = phone_cus.value;
             email_cus_info.innerText = email_cus.value;
             type_cus_info.innerText = type_cus.value;
-            request_cus_info.innerText = request_cus.value;
+            // if(request_cus_info !== "")
+            //     request_cus_info.innerText = request_cus.value;
+            // else
+                request_cus_info.innerText = "Muốn tổ chức lúc sáng và thuê vũ công ca nhạc, hỗ trợ ánh sáng đèn sân khấu"
         } else {
             alert("Vui lòng điền đầy đủ thông tin tên và số điện thoại.");
             }

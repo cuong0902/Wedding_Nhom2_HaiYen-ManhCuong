@@ -2,11 +2,19 @@ window.onload = function(){
 
     let main = document.getElementById("main");
     let button = document.querySelectorAll("button>img");
-    for(let bt of button)
-    {
+    let index = 0;
+    setInterval(function(){
+        button[index].click();
+
+        index++;
+        if(index >= button.length){
+            index = 0
+        }
+    },1500)
+    for(let bt of button){
         bt.onclick = function(){
             main.src = bt.src;
-        }
+        }  
     }
 
     /*Xu Li Thu Vien Anh*/

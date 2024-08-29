@@ -33,6 +33,11 @@ section{
 .images{
     width: 40%;
 }
+
+.bg_main{
+    width: 100%;
+}
+
 .button>button{
     padding: 0;
     margin: 0;
@@ -42,6 +47,7 @@ section{
     border: none;
 }
 button>img{
+    width: 10 0%;
     width: 100%;
 }
 
@@ -75,6 +81,8 @@ button>img{
     border: 1px solid black;
     border-radius: 5%;
     margin-top: 2%;
+    height: 30vh;
+    overflow: hidden;
 }
 .thumb>img{
     width: 100%;
@@ -87,6 +95,7 @@ button>img{
     text-transform: uppercase;
     color: darkblue;
     text-shadow: 2px 3px 2px whitesmoke;
+    
 }
 
 .none{
@@ -95,4 +104,10 @@ button>img{
 
 .pro_none{
     display: none !important;
+}
+
+@media screen and (max-width: 600px){
+    .thumb{
+        height: initial;
+    }
 }

@@ -1,6 +1,7 @@
 /*Gom header nav footer*/
 *{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1vw;
 }
 .flex{
     display: flex;
@@ -8,18 +9,24 @@
     justify-content: space-between;
 }
 :root{
-    --x: 10px;
+    --x: 1vw;
 }
 
 /*header*/
+
 .header{
     background-color: black;
     color: white;
 }
 
+.header>img{
+    width: 10%;
+}
+
 h1.subject{
     text-transform: uppercase;
     text-shadow: 3px 2px 2px whitesmoke;
+    font-size: 2rem;
 }
 .header>ul>li{
     list-style-type: none;
@@ -78,7 +85,7 @@ h1.subject{
 }
 /*nav*/
 nav{
-    background-color: rgb(180, 193, 187);
+    background-color: lightblue;
 }
 ul.menu{
     list-style-type: none;
@@ -132,10 +139,10 @@ ul.menu>li>a:hover{
     margin-left: 0;
 }
 .search>input{
-    font-size: large;
+    font-size: 1rem;
 }
 .search button{
-    font-size: large;
+    font-size: 1rem;
 }
 
 
@@ -147,20 +154,22 @@ ul.menu>li>a:hover{
     padding: 0;
     font-size: 1.5rem;
     color: aliceblue;
+    font-weight: bold;
 }
+
 
 .input{
     margin-bottom: var(--x);
 }
 
 textarea{
-    width: 250px;
-    height: 100px;
+    width: 23vw;
+    height: 10vh;
 }
 
-#select{
-    width: 160px;
-    height: 25px;
+#type_cus{ /*select box*/
+    width: 11.7vw;
+    height: 3.5vh;
 }
 
 /*from*/
@@ -170,17 +179,16 @@ textarea{
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 99;
     position: fixed;
-    top: 0;  
+    top: 10%;  
 }
 .form_confirm{
     border: 1px solid gray;
     background-color: white;
-    width: 70%;
+    width: 50%;
     margin: 0 auto;
     display: flex;
     padding-bottom: 1%;
     color: rgb(26, 22, 22);
-    font-size: 1.5rem;
     margin: 2% auto 2%;
 }
 .form_confirm>div:first-child,.form_confirm>div:last-child {
@@ -230,10 +238,73 @@ textarea{
     margin-left: auto;
 }
 
-/*dùng cho js gọi*/
+.hide{
+    display: none;
+}
+
+/*dùng cho js gọi khi scroll*/
 .nav{
     position: fixed;
     top: 0%;
     width: 100%;
     z-index: 3;
+}
+
+div.nav_mobile{
+    display: none ;
+}
+
+/*view port*/
+@media screen and (max-width: 600px) {
+
+
+    footer iframe,h3{
+        display: none;
+    }
+
+    .bgfooter{
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    #type_cus{ /*select box*/
+        width: initial;
+        height: initial;
+    }
+
+    /*Sửa Menu*/
+
+    #nav{
+        display: none !important;
+    }
+
+    #nav_mobile{
+        display: block !important;
+        position: relative;
+        
+    }
+    #nav_mobile>button{
+        position: fixed;
+        z-index: 10;
+    }
+
+    #nav_mobile  button{
+        background-color: rgb(8, 23, 23);
+        color: white;
+        /* position: fixed; */
+    }
+
+    #nav_mobile  ul{
+         position: fixed; 
+        
+        z-index: 2;
+        background-color: rgba(11, 11, 11, 0.8);
+        color: white;
+    }
+
+    #nav_mobile  ul li a{
+        color: white !important;
+    }
+
+    
 }

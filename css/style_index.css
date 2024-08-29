@@ -145,7 +145,7 @@ section{
 }
 .service>p{
     text-transform: uppercase;
-    font-size: large;
+    font-size: 1rem;
     font-weight: bolder;
     color: cadetblue;
     position: absolute;
@@ -181,7 +181,7 @@ section{
 }
 
 /*section blogs*/
-.blogs{
+.blog{
     flex-wrap: wrap;
 }
 .news{
@@ -235,10 +235,13 @@ section{
 }
 
 .page_blog>div{
-    padding: 0.3rem;
+    padding: 0;
     margin: 0.1rem;
-    border: 1px solid black;
-    background-color: gray;
+}
+
+.active{
+    background-color: blue;
+    color: white;
 }
 
 /*section comments*/
@@ -316,7 +319,7 @@ section{
     background-color: aliceblue;
     margin: 0;
     border: 1px solid red;
-    border-radius: 30px;
+    border-radius: 70px;
     display: flex;
     align-items: center;
     top: 90%;
@@ -333,6 +336,7 @@ section{
     font-weight: bold;
     margin:0;
     color: blue;
+    
 }
 .phone a{
     text-decoration: none;
@@ -340,12 +344,11 @@ section{
 
 .back{
     top: 95%;
-    right: 25%;
+    right: 5%;
     position: fixed;
 }
-.back>button{
-    padding: 0.5% 50%;
-    transition: 0.5s;
+.back>i{
+    padding: 0.1rem;
 }
 
 .hide{
@@ -356,4 +359,15 @@ section{
     display: block;
 }
 
+
+/*View port */
+@media screen and (max-width: 600px) {
+    section{
+        width: 100%;
+    }
+
+    .ads{
+        display: none;
+    }
+}
 

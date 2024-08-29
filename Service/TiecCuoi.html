@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../css/style_service.css">
     <link rel="stylesheet" href="../css/style_public.css">
     <script src="../js/script_service.js"></script>
+    <script src="../js/script_viewport.js"></script>
 </head>
 <body>
     <header id="header" class="flex header">
@@ -32,12 +33,12 @@
                 </li>
         </ul>
     </header>
-    <nav class="flex">
+    <nav id="nav" class="flex nav">
         <div></div>
         <div></div>
        <ul class="flex menu">
             <li><a href="../index.html"><i class="fa-solid fa-house"></i>Trang Chủ</a></li>
-            <li class="sub"><a href="TiecCuoi.html">Dịch Vụ Tiệc</a>
+            <li class="sub"><a href="Service/TiecCuoi.html">Dịch Vụ Tiệc</a>
                 <ul class="menu flex submenu">
                     <li><a href="TiecCongTy.html">Tiệc Công Ty</a></li>
                     <li><a href="TiecCuoi.html">Tiệc Cưới</a></li>
@@ -49,10 +50,26 @@
             <li><a href="../contact.html">Liên Hệ</a></li>
        </ul>
         <div class="search">
-            <input type="search" placeholder="Nhập từ khóa"/>
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>    
+            <input id="search" type="search" placeholder="Nhập từ khóa"/>
+            <a href="#"><button id="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button></a>
         </div>
     </nav>
+
+    <div id="nav_mobile" class="nav_mobile" >
+        <button id="btn_menu_mobile">Menu</button>  
+        <ul class="menu hide" id="mobile_menu">
+                <button id="close_menu_mobile">&times;</button>
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i>Trang Chủ</a></li>
+
+                <li><a href="TiecCongTy.html">Tiệc Công Ty</a></li>
+                <li><a href="TiecCuoi.html">Tiệc Cưới</a></li>
+                <li><a href="TiecNgoai.html">Tiệc Ngoài</a></li>
+                <li><a href="TiecCaNhan.html">Tiệc Cá Nhân</a></li>
+            
+                <li><a href="../blogs.html">Tin Tức</a></li>
+                <li><a href="../contact.html">Liên Hệ</a></li>
+        </ul>
+    </div>
 
     <main>
         <section class="flex">
@@ -86,7 +103,7 @@
             </div>
             <div class="images">
                 <div>
-                    <img id="main" src="../image/service/TiecCuoi/thumb_1.webp" alt="Hình 1">
+                    <img class="bg_main" id="main" src="../image/service/TiecCuoi/thumb_1.webp" alt="Hình 1">
                 </div>
                 <div class="flex button">
                     <button><img src="../image/service/TiecCuoi/thumb_1.webp" alt=""></button>
@@ -164,43 +181,9 @@
     </main>
 
 
-    <footer id="footer">
-        <form action="" class="form_confirm pro_none">
-            <div></div>
-            <div class="form_main">
-                <h2>Thông Tin Liên Hệ</h2>
-                <table>
-                    <tr>
-                        <td class="name_object">Họ Tên:</td>
-                        <td id="name_cus_info" class="name_info">Nguyễn Mạnh Cường</td>
-                    </tr>
-                    <tr>
-                        <td class="name_object">Số Điện Thoại:</td>
-                        <td id="phone_cus_info" class="name_info">0338638774</td>
-                    </tr>
-                    <tr>
-                        <td class="name_object">Email:</td>
-                        <td id="email_cus_info" class="name_info">2051052015cuong@ou.edu.vn</td>
-                    </tr>
-                    <tr>
-                        <td class="name_object">Loại Tiệc:</td>
-                        <td id="type_cus_info" class="name_info">Tiệc Cưới</td>
-                    </tr>
-                    <tr>
-                        <td class="name_object">Yêu Cầu:</td>
-                        <td id="request_cus_info" class="name_info"><textarea >Muốn tổ chức lúc sáng và thuê vũ công ca nhạc, hỗ trợ ánh sáng đèn sân khấu</textarea>
-                        </td>
-                    </tr>
-                </table>
-                <p>Chúng tôi sẽ liên hệ bạn sớm nhất. Chúc bạn một ngày tốt lành!</p>
-                <div id="btn_confirm">Xác Nhận</div>
-
-            </div>
-            <div></div>
-        </form>
-
+    <footer id="footer" >
         <div class="flex bgfooter">
-            <ul >
+            <ul style="list-style-type: none;">
                 <li>Nhà Hàng Tiệc Cưới Cepella ParkView</li>
                 <li>Địa Chỉ: KDC Nhơn Đức, Nhà Bè, TP. Hồ Chí Minh</li>
                 <li>Điện Thoại: 0338638774</li>
@@ -229,15 +212,12 @@
                 <button id="btn_submit">Gửi Liên Hệ</button>
   
             </div>
-            <div >
-                <h3 style="height: 20%;">Địa chỉ Nhà hàng</h3>
-                <iframe width="90%" height="80%" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15677.82484184881!2d106.6902291!3d10.7763284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3ae35e3725%3A0x20c5174a47f97be3!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBN4bufIFRQLkhDTSAtIEPGoSBz4bufIDE!5e0!3m2!1svi!2s!4v1722791358922!5m2!1svi!2s"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div>
+                <h3 style="height: 2rem; padding: 0; margin: 0;">Địa chỉ Nhà hàng</h3>
+                <iframe  width="450vw" height="200vh" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15677.82484184881!2d106.6902291!3d10.7763284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3ae35e3725%3A0x20c5174a47f97be3!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBN4bufIFRQLkhDTSAtIEPGoSBz4bufIDE!5e0!3m2!1svi!2s!4v1722791358922!5m2!1svi!2s"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-        </div>
-
-
-        
-       
+            <div style="width: 0.1%;"></div>
+        </div>         
     </footer>
 </body>
 </html>

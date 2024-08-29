@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Website Nhà Hàng tiệc cưới"/>
     <meta http-equiv="refresh" content="1800" />
-    <title>Tiệc Cưới - Nhà Hàng Tiệc Cưới Capella Park View</title>
+    <title>Tiệc Công Ty - Nhà Hàng Tiệc Cưới Capella Park View</title>
     <link href="../image/demo/logo.webp" rel="shortcut icon"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="../css/style_service.css">
     <link rel="stylesheet" href="../css/style_public.css">
     <script src="../js/script_service.js"></script>
+    <script src="../js/script_viewport.js"></script>
 </head>
 <body>
     <header id="header" class="flex header">
@@ -32,12 +33,12 @@
                 </li>
         </ul>
     </header>
-    <nav class="flex">
+    <nav id="nav" class="flex nav">
         <div></div>
         <div></div>
        <ul class="flex menu">
             <li><a href="../index.html"><i class="fa-solid fa-house"></i>Trang Chủ</a></li>
-            <li class="sub"><a href="TiecCuoi.html">Dịch Vụ Tiệc</a>
+            <li class="sub"><a href="Service/TiecCuoi.html">Dịch Vụ Tiệc</a>
                 <ul class="menu flex submenu">
                     <li><a href="TiecCongTy.html">Tiệc Công Ty</a></li>
                     <li><a href="TiecCuoi.html">Tiệc Cưới</a></li>
@@ -49,51 +50,59 @@
             <li><a href="../contact.html">Liên Hệ</a></li>
        </ul>
         <div class="search">
-            <input type="search" placeholder="Nhập từ khóa"/>
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>    
+            <input id="search" type="search" placeholder="Nhập từ khóa"/>
+            <a href="#"><button id="btn_search"><i class="fa-solid fa-magnifying-glass"></i></button></a>
         </div>
     </nav>
+
+    <div id="nav_mobile" class="nav_mobile" >
+        <button id="btn_menu_mobile">Menu</button>  
+        <ul class="menu hide" id="mobile_menu">
+                <button id="close_menu_mobile">&times;</button>
+                <li><a href="../index.html"><i class="fa-solid fa-house"></i>Trang Chủ</a></li>
+
+                <li><a href="TiecCongTy.html">Tiệc Công Ty</a></li>
+                <li><a href="TiecCuoi.html">Tiệc Cưới</a></li>
+                <li><a href="TiecNgoai.html">Tiệc Ngoài</a></li>
+                <li><a href="TiecCaNhan.html">Tiệc Cá Nhân</a></li>
+            
+                <li><a href="../blogs.html">Tin Tức</a></li>
+                <li><a href="../contact.html">Liên Hệ</a></li>
+        </ul>
+    </div>
 
     <main>
         <section class="flex">
             <div class="contents">
-                <h2>Không Gian Tiệc Sang Trọng</h2>
-                <h1>Để Ngày Cưới Là Khởi Đầu<span style="color: rgb(141, 141, 225);"> Hạnh Phúc </span></h1>
+                <h2>KHÔNG GIAN LÝ TƯỞNG CHO CÁC SỰ KIỆN</h2>
+                <h1>Kết Nối Để<span style="color: rgb(141, 141, 225);"> PHÁT TRIỂN </span></h1>
                 <div class="content">
                     <p>
-                        Trong ngày trọng đại của cuộc đời, bạn muốn ghi dấu ấn với những người thân yêu, hãy để chúng tôi chu toàn cho từng khoảnh khắc ấy. Hãy tận hưởng hạnh phúc trong ngày trọng đại, còn lại hãy để chúng tôi lên kế hoạch và triển khai.
+                        Chúng tôi mang đến một không gian đa chức năng phù hợp cho nhiều loại hình hội nghị, sự kiện và yến tiệc trọng đại.
+                    </p>     
+                    <p>
+                        Sảnh tiệc được trang bị Hệ thống âm thanh, ánh sáng, màn hình LED – LCD hiện đại mới nhất, giúp truyền tải thông điệp một cách dễ dàng với hình ảnh sắc nét.
                     </p>
                     <p>
-                        TRANG TRÍ
-                    <p>
-                    <p>
-                        Từ khu vực đón khách cho đến sân khấu và bàn tiệc đều được đội ngũ có tay nghề và nhiều kinh nghiệm trong việc trang trí làm cho trở nên sinh động và sang trọng hơn.
-                        Khách mời sẽ cảm thấy ấn tượng và cảm nhận rõ nét về phong cách ngay khi đặt chân vào khu vực đón khách. Tại đây, có khu vực chụp hình được kết từ hoa tươi, pha lê, hoa lụa cao cấp, sẽ là nơi ghi lại những bức hình kỷ niệm của cô dâu chú rể và khách mời.
+                        Một buổi họp nhỏ có thể phát sinh những ý tưởng lớn khi mọi người ngồi lại cùng nhau làm thay đổi bức tranh tài chính hoặc mang đến cơ cấu hiệu quả cho một doanh nghiệp. Chúng tôi lắng nghe, thấu hiểu và sáng tạo để sự kiện của quý khách luôn là "Điểm nhấn hoàn hảo - Trên hành trình đi đến thành công"
                     </p>
                     <p>
-                        CHƯƠNG TRÌNH
+                        Ẩm thực là một phần quan trọng thay lời cảm ơn của chủ tiệc gửi tới khách mời. Chúng tôi luôn tự hào về đội ngũ đầu bếp có thể đáp ứng yêu cầu khắt khe nhất về ẩm thực của mỗi vị khách.    
                     </p>
-                    <p>
-                        Những chương trình biểu diễn nghệ thuật đặc sắc, sáng tạo và bất ngờ đến từ các nghệ sĩ biểu diễn chuyên nghiệp sẽ là một mở đầu ấn tượng cho hôn lễ của bạn. Các chuyên viên tổ chức sự kiện của chúng tôi sẽ kể lại câu chuyện tình yêu của bạn bằng ngôn ngữ của âm nhạc và nghệ thuật để chắp cánh cho tình yêu ấy thăng hoa trong ngày hạnh phúc.
-                    </p>
-                    <p>
-                        ẨM THỰC
-                    </p>
-                    <p>
-                        Sự tài hoa, nét tinh tế trong cách chế biến thực đơn của đội ngũ đầu bếp cao cấp cùng các trang thiết bị nhà bếp hiện đại là yếu tố vàng giúp dịch vụ ẩm thực của chúng tôi trở thành một thế mạnh.
-                    </p>
+                    
                 </div>
             </div>
             <div class="images">
                 <div>
-                    <img id="main" src="../image/service/TiecCuoi/thumb_1.webp" alt="Hình 1">
+                    <img class="bg_main" id="main" src="../image/service/TiecCongTy/thumb_1.webp" alt="Hình 1">
                 </div>
                 <div class="flex button">
-                    <button><img src="../image/service/TiecCuoi/thumb_1.webp" alt=""></button>
-                    <button><img src="../image/service/TiecCuoi/thumb_2.jpg" alt=""></button>
-                    <button><img src="../image/service/TiecCuoi/thumb_3.jpg" alt=""></button>
-                    <button><img src="../image/service/TiecCuoi/thumb_4.webp" alt=""></button>
-                    <button><img src="../image/service/TiecCuoi/thumb_5.webp" alt=""></button>
+                    <div></div>
+                    <button><img src="../image/service/TiecCongTy/thumb_2.jpg" alt=""></button>
+                    <button><img src="../image/service/TiecCongTy/thumb_1.webp" alt=""></button>
+                    <button><img src="../image/service/TiecCongTy/thumb_3.webp" alt=""></button>
+                    <button><img src="../image/service/TiecCongTy/thumb_4.webp" alt=""></button>
+                    <button><img src="../image/service/TiecCongTy/thumb_5.webp" alt=""></button>
                 </div>
             </div>
         </section>
@@ -103,100 +112,126 @@
                 <h1 style="color: rgb(141, 141, 225);">Thư Viện Hình Ảnh</h1>
             </div>
             <div class="category">
-                <button id="btn1">Phong cách trang trí tiệc</button>
-                <button id="btn2">Tiệc Cưới nổi bật</button>
+                <button id="btn1">Hội Nghị</button>
+                <button id="btn2">Tiệc Chiêu Đãi</button>
             </div>
             <div id="thumb1" class="thumbs flex">
                 <div class="thumb">
-                    <img src="../image/service/TiecCuoi/ThuVienAnh/thumb_1.jpg" alt="">
-                    <p>Just Say Yes</p>
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/jollibee.webp" alt="">
+                    <p>Jollibee - Reach For The Stars</p>
                 </div>
                 <div class="thumb">
-                    <img src="../image/service/TiecCuoi/ThuVienAnh/thumb_2.webp" alt="">
-                    <p>White Elegant</p>
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/CoCaBatKhatKhaoNangLuong.webp" alt="">
+                    <p>Coca Cola - Bật khát khao chinh phục thị trường 2022</p>
                 </div>
                 <div class="thumb">
-                    <img src="../image/service/TiecCuoi/ThuVienAnh/thumb_3.jpg" alt="">
-                    <p>Charmed Fairy</p>
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/TamSuConsen.webp" alt="">
+                    <p>"Tâm sự con sen" về nghề content</p>
                 </div>
                 <div class="thumb">
-                    <img src="../image/service/TiecCuoi/ThuVienAnh/thumb_4.jpg" alt="">
-                    <p>Blossom Romance</p>
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/Tupperware.webp" alt="">
+                    <p>Tupperware - Lễ ra mắt sản phẩm</p>
                 </div>
 
                 <div class="thumb">
-                    <img src="../image/service/TiecCuoi/ThuVienAnh/thumb_5.jpg" alt="">
-                    <p>Rosella Sweet</p>
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/HoiNghiTrienLamCongNghesale.webp" alt="">
+                    <p>Hội Nghị triển lãm công nghệ sale&marketing 2019</p>
                 </div>
                 <div class="thumb">
-                    <img src="../image/service/TiecCuoi/ThuVienAnh/thumb_6.jpg" alt="">
-                    <p>Idylic love</p>
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/vecomBanhangtoancay.webp" alt="">
+                    <p>Vecom - Bán hàng toàn cầu với Amazone</p>
                 </div>
                 <div class="thumb">
-                    <img src="../image/service/TiecCuoi/ThuVienAnh/thumb_7.jpg" alt="">
-                    <p>Orchid Purity</p>
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/MatBaoKinhDoanhThoiDaiSo.jpg" alt="">
+                    <p>Mắt bão - Kinh doanh thời đại số</p>
                 </div>
                 <div class="thumb">
-                    <img src="../image/service/TiecCuoi/ThuVienAnh/thumb_8.jpg" alt="">
-                    <p>Bohemain</p>
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/tâpđoanHungThinh.jpg" alt="">
+                    <p>Tập đoàn Hưng Thịnh - Hội nghị tổng kết kinh doanh</p>
                 </div>
             </div>
 
-            <div id="thumb2" class="thumbs_2 flex none">
+            <div id="thumb2" class="thumbs_2 flex none" style="flex-wrap: wrap;">
                 <div class="thumb">
-                    <img src="../image/service/TiecCuoi/ThuVienAnh/thumb_9.jpg" alt="">
-                    <p>Hoàng Tâm - Mai Thanh</p>
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/thumb_9.webp" alt="">
+                    <p>Johnnie Walker - Ý tưởng chất - Hất bay thử thách</p>
                 </div>
+            
                 <div class="thumb">
-                    <img src="../image/service/TiecCuoi/ThuVienAnh/thumb_10.webp" alt="">
-                    <p>Minh Hải - Lan Anh</p>
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/thumb_10.webp" alt="">
+                    <p>Lễ khai trương - Đông y Hồng Tâm</p>
                 </div>
-                <div class="thumb" >
-                    <img src="../image/service/TiecCuoi/ThuVienAnh/thumb_11.jpg" alt="">
-                    <p>Khương Tín - Ngọc Tâm</p>
-                </div>
+            
                 <div class="thumb">
-                    <img src="../image/service/TiecCuoi/ThuVienAnh/thumb_12.jpg" alt="">
-                    <p>Hoàng Nhân - Thanh Loan</p>
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/thumb_11.webp" alt="">
+                    <p>Hướng nghiệp Á Âu - Lễ tri ân 20/11</p>
                 </div>
-            </div>
+
+                <div class="thumb">
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/thumb_12.webp" alt="">
+                    <p>HD SaiSon - Union Party</p>
+                </div>
+
+                <div class="thumb">
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/thumb_13.webp" alt="">
+                    <p>Giao hàng tiết kiệm - Tiệc Tất Niên 2018</p>
+                </div>
+
+                <div class="thumb">
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/thumb_14.webp" alt="">
+                    <p>Chubb life VietNam - Tiệc Tất Niên 2018</p>
+                </div>
+
+                <div class="thumb">
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/thumb_15.webp" alt="">
+                    <p>Mỹ Phẩm Kohlan - Diamond Party</p>
+                </div>
+
+                <div class="thumb">
+                    <img src="../image/service/TiecCongTy/ThuVienAnh/thumb_16.webp" alt="">
+                    <p>Great Estern - Celebrate 110 great years</p>
+                </div>
         </section>
     </main>
 
 
-    <footer class="flex" style="background: url(../image/demo/bgFooter.jpeg)" >
-        <ul >
-            <li>Nhà Hàng Tiệc Cưới Cepella ParkView</li>
-            <li>Địa Chỉ: KDC Nhơn Đức, Nhà Bè, TP. Hồ Chí Minh</li>
-            <li>Điện Thoại: 0338638774</li>
-            <li>Email: Capella@gmail.com</li>
-        </ul>
-        <div >
-            <p>TƯ VẤN ĐẶT TIỆC</p>
-            <div class="input">
-                <input  type="text" placeholder="Họ và Tên">
-                <input  type="text" placeholder="Số Điện Thoại">
-            </div>
-            <div class="input">
-                <input  type="text" placeholder="Email">
-                <select id="select">
-                    <option>-Chọn Loại Tiệc-</option>
-                    <option>Tiệc Cưới</option>
-                    <option>Tiệc Công Ty</option>
-                    <option>Tiệc Ngoài Trời</option>
-                    <option>Dịch Vụ Khác</option>
-                </select>
+    <footer id="footer" >
+        <div class="flex bgfooter">
+            <ul style="list-style-type: none;">
+                <li>Nhà Hàng Tiệc Cưới Cepella ParkView</li>
+                <li>Địa Chỉ: KDC Nhơn Đức, Nhà Bè, TP. Hồ Chí Minh</li>
+                <li>Điện Thoại: 0338638774</li>
+                <li>Email: Capella@gmail.com</li>
+            </ul>
+            <div >
+                <p>TƯ VẤN ĐẶT TIỆC</p>
+                <div class="input">
+                    <input id="name_cus" type="text" placeholder="Họ và Tên">
+                    <input id="phone_cus" type="text" placeholder="Số Điện Thoại">
+                </div>
+                <div class="input">
+                    <input id="email_cus"  type="text" placeholder="Email">
+                    <select id="type_cus">
+                        <option>-Chọn Loại Tiệc-</option>
+                        <option>Tiệc Cưới</option>
+                        <option>Tiệc Công Ty</option>
+                        <option>Tiệc Ngoài Trời</option>
+                        <option>Dịch Vụ Khác</option>
+                    </select>
+                </div>
+                <div>
+                    <textarea name="" id="request_cus" placeholder="Yêu cầu khác"></textarea>
+                </div>
+
+                <button id="btn_submit">Gửi Liên Hệ</button>
+  
             </div>
             <div>
-                <textarea name="" id="" placeholder="Yêu cầu khác"></textarea>
+                <h3 style="height: 2rem; padding: 0; margin: 0;">Địa chỉ Nhà hàng</h3>
+                <iframe  width="450vw" height="200vh" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15677.82484184881!2d106.6902291!3d10.7763284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3ae35e3725%3A0x20c5174a47f97be3!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBN4bufIFRQLkhDTSAtIEPGoSBz4bufIDE!5e0!3m2!1svi!2s!4v1722791358922!5m2!1svi!2s"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            
-            <button>Gửi Liên Hệ</button>
-        </div>
-        <div >
-            <h3 style="height: 20%;">Địa chỉ Nhà hàng</h3>
-            <iframe width="90%" height="80%" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15677.82484184881!2d106.6902291!3d10.7763284!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3ae35e3725%3A0x20c5174a47f97be3!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBN4bufIFRQLkhDTSAtIEPGoSBz4bufIDE!5e0!3m2!1svi!2s!4v1722791358922!5m2!1svi!2s"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+            <div style="width: 0.1%;"></div>
+        </div>         
     </footer>
 </body>
 </html>
