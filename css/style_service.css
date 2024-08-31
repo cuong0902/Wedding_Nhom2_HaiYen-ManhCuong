@@ -110,4 +110,25 @@ button>img{
     .thumb{
         height: initial;
     }
+
+    #home_service{
+        display: block;
+    }
+    .contents{
+       width: 100%;
+    }
+
+    .contents>h1{
+        width: 40%;
+    }
+    .content{
+        width: 100%;
+    }
+
+    .images{
+        width: 100%;
+    }
+    #home_service img{
+        margin-top: 5%;
+    }
 }

@@ -369,5 +369,13 @@ section{
     .ads{
         display: none;
     }
+
+    #promo1{
+        display: none;
+    }
+
+    #promo_mobile{
+        display: block;
+    }
 }
 

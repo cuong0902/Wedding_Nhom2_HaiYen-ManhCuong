@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Bàn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        h2 {
+            text-align: center;
+            color: #3121c3;
+        }
+
+        section {
+            display: none;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        section.active {
+            display: block;
+            opacity: 1;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #3121c3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #3121c3;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s ease, border 0.3s ease;
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.1);
+        }
+
+        .image-grid img.selected {
+            border: 5px solid #4CAF50;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .button-group.back-next {
+            justify-content: space-between;
+        }
+
+        .confirm-form {
+            display: none;
+            text-align: center;
+        }
+
+        .confirm-form p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .confirm-form button {
+            margin-top: 20px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Section 1: Họ tên, Số điện thoại, Ngày tổ chức -->
+        <section id="section-1" class="active">
+            <h2>Phần 1: Thông Tin Cơ Bản</h2>
+            <label for="name">Họ Tên:</label>
+            <input type="text" id="name" placeholder="Nhập Họ Và Tên" required>
+
+            <label for="phone">Số Điện Thoại:</label>
+            <input type="tel" id="phone" placeholder="Nhập Số Điện Thoại" required>
+
+            <label for="wedding-date">Ngày Tổ Chức:</label>
+            <input type="date" id="wedding-date" required>
+
+            <div class="button-group">
+                <button id="next-1">Next</button>
+            </div>
+        </section>
+
+        <!-- Section 2: Chọn ảnh cho Sảnh, Thực Đơn, Kiểu trang trí -->
+        <section id="section-2">
+            <h2>Phần 2: Chọn Dịch Vụ</h2>
+
+            <label for="hall">Chọn Sảnh:</label>
+            <div class="image-grid" id="hall-selection">
+                <figure>
+                    <img src="image/order/Sanh_1.jpg" alt="Hall 1" data-name="Tiệc Cưới">
+                    <figcaption>Tiệc Cưới</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/order/Sanh_2.jpg" alt="Hall 2" data-name="Tiệc Cá Nhân">
+                    <figcaption>Tiệc Cá Nhân</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/order/Sanh_3.jpg" alt="Hall 3" data-name="Tiệc Công Ty">
+                    <figcaption>Tiệc Công Ty</figcaption>
+                </figure>
+            </div>
+
+            <label for="menu">Chọn Thực Đơn:</label>
+            <div class="image-grid" id="menu-selection">
+                <figure>
+                    <img src="image/menu_1.jpg" alt="Menu 1" data-name="Món Chay">
+                    <figcaption>Món Chay</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/menu_2.jpg" alt="Menu 2" data-name="Món Hàn">
+                    <figcaption>Món Hàn</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/menu_3.jpg" alt="Menu 3" data-name="Món Cay Cao Cấp">
+                    <figcaption>Món Cay Cao Cấp</figcaption>
+                </figure>
+            </div>
+
+            <label for="decoration">Chọn Cách Bố Trí:</label>
+            <div class="image-grid" id="decoration-selection">
+                <figure>
+                    <img src="image/decor_1.jpg" alt="Decoration 1" data-name="Kiểu Pháp">
+                    <figcaption>Kiểu Pháp</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/decor_2.jpg" alt="Decoration 2" data-name="Kiểu Trung Hoa">
+                    <figcaption>Kiểu Trung Hoa</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/decor_3.jpg" alt="Decoration 3" data-name="Kiểu Truyền Thống">
+                    <figcaption>Kiểu Truyền Thống</figcaption>
+                </figure>
+            </div>
+
+            <div class="button-group back-next">
+                <button id="back-2">Back</button>
+                <button id="next-2">Next</button>
+            </div>
+        </section>
+
+        <!-- Section 3: Số lượng bàn đặt và chương trình biểu diễn -->
+        <section id="section-3">
+            <h2>Phần 3: Quy Mô và Cách Tổ Chức</h2>
+
+            <label for="tables">Chọn Số Lượng Bàn:</label>
+            <div class="image-grid" id="table-selection">
+                <figure>
+                    <img src="image/table_1.jpg" alt="10 Tables" data-name="50-100 Bàn">
+                    <figcaption>50-100 Bàn</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/table_2.jpg" alt="20 Tables" data-name="100-200 Bàn">
+                    <figcaption>100-200 Bàn</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/table_3.jpg" alt="30 Tables" data-name="300-500 Bàn">
+                    <figcaption>300-500 Bàn</figcaption>
+                </figure>
+            </div>
+
+            <label for="table-style">Chọn Chương Trình Biểu Diễn:</label>
+            <div class="image-grid" id="table-style-selection">
+                <figure>
+                    <img src="image/round_table.jpg" alt="Round Table" data-name="Nhạc Cưới">
+                    <figcaption>Nhạc Cưới</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/square_table.jpg" alt="Square Table" data-name="Nhạc Sinh Nhật và Bánh Kem">
+                    <figcaption>Nhạc Sinh Nhật và Bánh Kem</figcaption>
+                </figure>
+                <figure>
+                    <img src="image/long_table.jpg" alt="Long Table" data-name="Nhạc Chúc Mừng">
+                    <figcaption>Nhạc Chúc Mừng</figcaption>
+                </figure>
+            </div>
+
+            <div class="button-group back-next">
+                <button id="back-3">Back</button>
+                <button id="submit-btn">Submit</button>
+            </div>
+        </section>
+
+        <!-- Confirmation Form -->
+        <section id="confirmation" class="confirm-form">
+            <h2>Thông Tin Xác Nhận</h2>
+            <p><strong>Tên:</strong> <span id="confirm-name"></span></p>
+            <p><strong>Số Điện Thoại:</strong> <span id="confirm-phone"></span></p>
+            <p><strong>Ngày Tổ Chức:</strong> <span id="confirm-date"></span></p>
+            <p><strong>Sảnh:</strong> <span id="confirm-hall"></span></p>
+            <p><strong>Thực Đơn:</strong> <span id="confirm-menu"></span></p>
+            <p><strong>Bố Trí:</strong> <span id="confirm-decoration"></span></p>
+            <p><strong>Số Bàn:</strong> <span id="confirm-table"></span></p>
+            <p><strong>Chương Trình Biểu Diễn:</strong> <span id="confirm-performance"></span></p>
+            <button id="submit-confirm-btn">Xác Nhận Đặt Bàn</button>
+        </section>
+    </div>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        let currentSectionIndex = 0;
+
+        const hallSelection = document.querySelectorAll('#hall-selection img');
+        const menuSelection = document.querySelectorAll('#menu-selection img');
+        const decorationSelection = document.querySelectorAll('#decoration-selection img');
+        const tableSelection = document.querySelectorAll('#table-selection img');
+        const tableStyleSelection = document.querySelectorAll('#table-style-selection img');
+
+        const selections = {
+            name: '',
+            phone: '',
+            date: '',
+            hall: '',
+            menu: '',
+            decoration: '',
+            tables: '',
+            performance: ''
+        };
+
+        const updateSelection = (images, key) => {
+            images.forEach(image => {
+                image.addEventListener('click', function() {
+                    images.forEach(img => img.classList.remove('selected'));
+                    image.classList.add('selected');
+                    selections[key] = image.dataset.name;
+                });
+            });
+        };
+
+        updateSelection(hallSelection, 'hall');
+        updateSelection(menuSelection, 'menu');
+        updateSelection(decorationSelection, 'decoration');
+        updateSelection(tableSelection, 'tables');
+        updateSelection(tableStyleSelection, 'performance');
+
+        const nextBtn1 = document.getElementById('next-1');
+        const nextBtn2 = document.getElementById('next-2');
+        const submitBtn = document.getElementById('submit-btn');
+        const backBtn2 = document.getElementById('back-2');
+        const backBtn3 = document.getElementById('back-3');
+        const confirmationSection = document.getElementById('confirmation');
+
+        nextBtn1.addEventListener('click', function() {
+            selections.name = document.getElementById('name').value;
+            selections.phone = document.getElementById('phone').value;
+            selections.date = document.getElementById('wedding-date').value;
+
+            if (selections.name && selections.phone && selections.date) {
+                sections[currentSectionIndex].classList.remove('active');
+                currentSectionIndex++;
+                sections[currentSectionIndex].classList.add('active');
+            } else {
+                alert('Vui lòng điền đủ thông tin.');
+            }
+        });
+
+        nextBtn2.addEventListener('click', function() {
+            if (selections.hall && selections.menu && selections.decoration) {
+                sections[currentSectionIndex].classList.remove('active');
+                currentSectionIndex++;
+                sections[currentSectionIndex].classList.add('active');
+            } else {
+                alert('Vui lòng chọn các tùy chọn.');
+            }
+        });
+
+        backBtn2.addEventListener('click', function() {
+            sections[currentSectionIndex].classList.remove('active');
+            currentSectionIndex--;
+            sections[currentSectionIndex].classList.add('active');
+        });
+
+        backBtn3.addEventListener('click', function() {
+            sections[currentSectionIndex].classList.remove('active');
+            currentSectionIndex--;
+            sections[currentSectionIndex].classList.add('active');
+        });
+
+        submitBtn.addEventListener('click', function() {
+            if (selections.tables && selections.performance) {
+                sections[currentSectionIndex].classList.remove('active');
+                confirmationSection.classList.add('active');
+                document.getElementById('confirm-name').textContent = selections.name;
+                document.getElementById('confirm-phone').textContent = selections.phone;
+                document.getElementById('confirm-date').textContent = selections.date;
+                document.getElementById('confirm-hall').textContent = selections.hall;
+                document.getElementById('confirm-menu').textContent = selections.menu;
+                document.getElementById('confirm-decoration').textContent = selections.decoration;
+                document.getElementById('confirm-table').textContent = selections.tables;
+                document.getElementById('confirm-performance').textContent = selections.performance;
+            } else {
+                alert('Vui lòng chọn các tùy chọn.');
+            }
+        });
+
+        const submitConfirmBtn = document.getElementById('submit-confirm-btn');
+        submitConfirmBtn.addEventListener('click', function() {
+        window.location.href = 'index.html';  
+    });  
+    </script>
+</body>
+</html>

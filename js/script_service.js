@@ -43,17 +43,6 @@ window.onload = function(){
         lib2.className="thumbs_2 flex";
     }
 
-      /* Cố định Menu */
-      let nav = document.getElementById("nav");
-      nav.className="flex";
-      window.onscroll = function(){   
-          if (window.scrollY > 200){
-              nav.className="flex nav";
-          }
-          if (window.scrollY < 200){
-              nav.className="flex";
-          }
-      }
   
       /* Đóng form */
       let btn_confirm = document.getElementById("btn_confirm");
@@ -89,3 +78,17 @@ window.onload = function(){
               }
           }
 }
+
+window.addEventListener("load", function(){
+    /* Cố định Menu */
+    let nav = document.getElementById("nav");
+    nav.className = "flex"; // Đặt lớp mặc định là flex
+
+    window.addEventListener("scroll", function() {  // Lắng nghe sự kiện scroll
+        if (window.scrollY > 150) {
+            nav.classList.add("nav");
+        } else {
+            nav.classList.remove("nav");
+        }
+    });
+});

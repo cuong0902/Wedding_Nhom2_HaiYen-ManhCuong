@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+h2 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+section {
+    display: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+section.active {
+    display: block;
+    opacity: 1;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+input[type="number"],
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.image-grid img:hover {
+    transform: scale(1.1);
+}
+
+.image-grid img.selected {
+    border: 5px solid #4CAF50;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.button-group.back-next {
+    justify-content: space-between;
+}
+
+.confirm-form {
+    display: none;
+    text-align: center;
+}
+
+.confirm-form p {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.confirm-form button {
+    margin-top: 20px;
+    width: 200px;
+}
