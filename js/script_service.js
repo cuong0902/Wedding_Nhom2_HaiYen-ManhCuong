@@ -5,7 +5,6 @@ window.onload = function(){
     let index = 0;
     setInterval(function(){
         button[index].click();
-
         index++;
         if(index >= button.length){
             index = 0

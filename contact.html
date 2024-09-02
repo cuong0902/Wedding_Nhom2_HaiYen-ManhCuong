@@ -11,7 +11,7 @@
 </head>
 <body>
     <header id="header" class="flex header">
-        <img src="image/demo/logo.webp" alt="Logo">
+        <img src="../image/demo/logo.webp" alt="Logo">
         <h1 class="subject">Nhà hàng tiệc cưới Capella Park View</h1>
         <ul class="flex">
                 <li class="notices"><a href="#"><i class="fa-solid fa-bell"></i></a>
@@ -49,7 +49,25 @@
         <div></div>
     </nav>
 
-
+    <div class="event-selection">
+        <div class="event-option">
+            <img src="image/anh/content1.jpg" alt="Tiệc cưới">
+            <div class="overlay-text">TIỆC CƯỚI</div>
+        </div>
+        <div class="event-option">
+            <img src="image/anh/sn.jpg" alt="Tiệc thôi nôi">
+            <div class="overlay-text">TIỆC THÔI NÔI</div>
+        </div>
+        <div class="event-option">
+            <img src="image/anh/item2.jpg" alt="Tiệc tại gia">
+            <div class="overlay-text">TIỆC TẠI GIA</div>
+        </div>
+        <div class="event-option">
+            <img src="image/anh/hn.jpg" alt="Hội nghị & sự kiện">
+            <div class="overlay-text">HỘI NGHỊ & SỰ KIỆN</div>
+        </div>
+    </div>
+    
     <div class="contact-wrapper">
         <div class="contact-info">
             <h2>CÔNG TY CỔ PHẦN THƯƠNG MẠI VÀ DỊCH VỤ THỦ ĐÔ</h2>
@@ -100,6 +118,45 @@
             nav.className="flex";
         }
     }
+    document.addEventListener("DOMContentLoaded", function() {
+    // Lấy tất cả các phần tử muốn áp dụng hiệu ứng
+    const elements = document.querySelectorAll('.event-option, .contact-info, .contact-form');
+
+    // Hàm kiểm tra vị trí của phần tử và thêm lớp chuyển động
+    function checkPosition() {
+        elements.forEach(function(element) {
+            const position = element.getBoundingClientRect();
+            // Kiểm tra nếu phần tử nằm trong khung nhìn của người dùng
+            if (position.top < window.innerHeight && position.bottom >= 0) {
+                element.classList.add('animate');
+            }
+        });
+    }
+
+    // Gọi hàm checkPosition mỗi khi người dùng cuộn trang
+    window.addEventListener('scroll', checkPosition);
+
+    // Gọi hàm này ngay khi trang vừa load
+    checkPosition();
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const eventOptions = document.querySelectorAll('.event-option');
+
+    eventOptions.forEach(option => {
+        option.addEventListener('mouseenter', function() {
+            const overlayText = this.querySelector('.overlay-text');
+            overlayText.style.transform = 'translate(-50%, -50%) scale(1.1)';
+            overlayText.style.opacity = '1';
+        });
+
+        option.addEventListener('mouseleave', function() {
+            const overlayText = this.querySelector('.overlay-text');
+            overlayText.style.transform = 'translate(-50%, 100%)';
+            overlayText.style.opacity = '0';
+        });
+    });
+});
+
     </script>
 
 </body>

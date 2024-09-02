@@ -11,7 +11,7 @@
 </head>
 <body>
     <header id="header" class="flex header">
-        <img src="image/demo/logo.webp" alt="Logo">
+        <img src="../image/demo/logo.webp" alt="Logo">
         <h1 class="subject">Nhà hàng tiệc cưới Capella Park View</h1>
         <ul class="flex">
                 <li class="notices"><a href="#"><i class="fa-solid fa-bell"></i></a>
@@ -101,6 +101,22 @@
             <div id="modalText"></div>
         </div>
     </div>
+    <div class="comments-section">
+    <h3>Bình luận</h3>
+    <form id="comment-form">
+        <label for="commenter-name">Tên:</label>
+        <input type="text" id="commenter-name" name="commenter-name" required>
+
+        <label for="comment-text">Bình luận:</label>
+        <textarea id="comment-text" name="comment-text" rows="4" required></textarea>
+
+        <button type="submit">Gửi Bình Luận</button>
+    </form>
+
+    <div id="comments-list">
+        <!-- Các bình luận sẽ xuất hiện ở đây -->
+    </div>
+</div>
 
 
     <script>
@@ -150,6 +166,34 @@
             nav.className="flex";
         }
     }
+
+    document.getElementById('comment-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Ngăn chặn submit form mặc định
+
+    // Lấy giá trị từ các input
+    const name = document.getElementById('commenter-name').value;
+    const comment = document.getElementById('comment-text').value;
+
+    // Tạo phần tử bình luận mới
+    const commentItem = document.createElement('div');
+    commentItem.classList.add('comment-item');
+
+    const commentAuthor = document.createElement('h4');
+    commentAuthor.textContent = name;
+
+    const commentText = document.createElement('p');
+    commentText.textContent = comment;
+
+    commentItem.appendChild(commentAuthor);
+    commentItem.appendChild(commentText);
+
+    // Thêm bình luận mới vào danh sách bình luận
+    document.getElementById('comments-list').appendChild(commentItem);
+
+    // Xóa các trường input sau khi bình luận được gửi
+    document.getElementById('comment-form').reset();
+});
+
     </script>
 </body>
 </html>
