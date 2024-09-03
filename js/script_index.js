@@ -10,7 +10,6 @@ window.onload = function(){
     {
         im.onclick = function(){
             let txt = im.getAttribute("rel");
-
             main_thumb.src = `image/demo/promos/${txt}.webp`;
             if(txt === "TiecCuoi_")
                 main_thumb.src = `image/demo/promos/${txt}.jpg`;
@@ -31,10 +30,8 @@ window.onload = function(){
     for(let im of img){
         im.onclick = function(){
             let txt = im.getAttribute("rel");
-
-            promo1.className = "pro_none";
+            promo1.className = "hide";
             promo2.className = "promos";
-
             main_thumb.src = `image/demo/promos/${txt}.webp`;
             if(txt === "TiecCuoi_")
                 main_thumb.src = `image/demo/promos/${txt}.jpg`;
@@ -50,7 +47,7 @@ window.onload = function(){
 
     let btClose = document.getElementById("promos_close");
     btClose.onclick = function(){
-        promo2.className = "pro_none";
+        promo2.className = "hide";
         promo1.className = "promo";
     }
 
